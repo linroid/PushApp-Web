@@ -50,7 +50,6 @@ class BindToken extends Model
 		$token->save();
 		return $token;
 	}
-	public static function check
 
 	public function user() {
 		return $this->belongsTo('App\User', 'user_id', 'id');

@@ -13,10 +13,30 @@ use App\BindToken;
 use App\Device;
 use Carbon\Carbon;
 use Input;
+use Lang;
 use Validator;
 
 class DeviceController extends ApiController {
 
+	public function getCheck() {
+		$token = Input::get('token');
+		$deviceId = Input::get('device_id');
+		if(empty($token)){
+			return $this->response->errorBadRequest(Lang::get('errors.illegal_access'));
+		}
+		/**
+		 * @var BindToken $bindToken
+		 */
+		$bindToken = BindToken::whereValue($token)->where('expire_in', '>', new Carbon())->first();
+		if ($bindToken) {
+			$existsDevice = Device::whereDeviceId($deviceId)->whereUserId($bindToken->user_id)->first();
+			if ($existsDevice) {
+				return $this->response->array($existsDevice);
+			}
+			return $this->response->noContent();
+		}
+		return $this->response->error(Lang::get("errors.expired_token"), 401);
+	}
 
 	public function postBind() {
 		$token = Input::get('token');
@@ -46,7 +66,7 @@ class DeviceController extends ApiController {
 			return $this->response->array($device->toArray());
 
 		}
-		return $this->response->error('', 401);
+		$this->response->error(Lang::get("errors.expired_token"), 401);
 	}
 
 }
