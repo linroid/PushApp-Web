@@ -15,9 +15,7 @@
     "doctrine/dbal": "^2.5",
     "liaol/socialite-cn": "dev-master",
     "barryvdh/laravel-debugbar": "^2.0",
-    "dingo/api": "^0.9.0",
     "simplesoftwareio/simple-qrcode": "1.3.*",
-    "tymon/jwt-auth": "0.5.*",
     "jenssegers/agent": "^2.1"
   },
   "require-dev": {

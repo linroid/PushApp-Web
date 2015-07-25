@@ -25,7 +25,7 @@ class InstallController extends Controller {
 	 */
 	public function __construct()
 	{
-		$this->middleware('device');
+		$this->middleware('device_count');
 		$this->middleware('auth');
 		View::share('active', 'install');
 	}

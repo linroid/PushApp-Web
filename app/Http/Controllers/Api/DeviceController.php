@@ -14,6 +14,7 @@ use App\Device;
 use Carbon\Carbon;
 use Input;
 use Lang;
+use Response;
 use Validator;
 
 class DeviceController extends ApiController {
@@ -22,7 +23,7 @@ class DeviceController extends ApiController {
 		$token = Input::get('token');
 		$deviceId = Input::get('device_id');
 		if(empty($token)){
-			return $this->response->errorBadRequest(Lang::get('errors.illegal_access'));
+			return Response::error(Lang::get('errors.illegal_access'), 400);
 		}
 		/**
 		 * @var BindToken $bindToken
@@ -31,11 +32,11 @@ class DeviceController extends ApiController {
 		if ($bindToken) {
 			$device = Device::whereDeviceId($deviceId)->whereUserId($bindToken->user_id)->first();
 			if ($device) {
-				return $this->response->array($device);
+				return Response::json($device);
 			}
-			return $this->response->noContent();
+			return Response::noContent();
 		}
-		return $this->response->error(Lang::get("errors.expired_token"), 401);
+		return Response::error(Lang::get("errors.expired_token"), 401);
 	}
 
 	public function postBind() {
@@ -53,7 +54,7 @@ class DeviceController extends ApiController {
 			}else {
 				$validator = Validator::make($data, Device::rules($bindToken->user_id), Device::messages());
 				if ($validator->fails()) {
-					return $this->response->error($validator->errors(), 400);
+					return Response::errors($validator->errors(), 400);
 				}
 				$device = new Device($data);
 				$device->token = str_random(64);
@@ -62,14 +63,14 @@ class DeviceController extends ApiController {
 				$device->user;
 			}
 
-			return $this->response->array([
-				'device'    => $device->toArray(),
-			    'user'      => $device->user()
+			return Response::json([
+				'device'    => $device,
+			    'user'      => $device
 			]);
 
 
 		}
-		$this->response->error(Lang::get("errors.expired_token"), 401);
+		return Response::error(Lang::get("errors.expired_token"), 401);
 	}
 
 }

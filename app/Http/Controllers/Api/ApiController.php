@@ -15,15 +15,5 @@ use Illuminate\Routing\Controller;
 use Validator;
 
 class ApiController extends Controller {
-	use Helpers;
-	/**
-	 * @property Response $response
-	 */
-//	/**
-//	 * {@inheritdoc}
-//	 */
-//	protected function formatErrors(Validator $validator)
-//	{
-//		return $validator->errors()->all();
-//	}
+
 }

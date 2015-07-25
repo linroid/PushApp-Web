@@ -17,8 +17,8 @@ Route::get('/auth/social', 'AuthController@getSocial');
 Route::get('/auth/callback', 'AuthController@getCallback');
 
 //for debug only
-if(config('app.debug')) {
-	Route::get('/auth/debug', function() {
+if (config('app.debug')) {
+	Route::get('/auth/debug', function () {
 		Auth::loginUsingId(5, true);
 		return Redirect::to('/');
 	});
@@ -29,12 +29,7 @@ Route::controller('/install', 'InstallController');
 Route::controller('/device', 'DeviceController');
 Route::controller('/device/api', 'Api\DeviceController');
 
-
-$api = app('Dingo\Api\Routing\Router');
-$api->version('v1', function ($api) {
-	/**
-	 * @var Dingo\Api\Routing\Router $api
-	 */
-	$api->controller('device', 'App\Http\Controllers\Api\DeviceController');
-	$api->controller('push', 'App\Http\Controllers\Api\PushController');
+Route::group(['prefix' => 'api', 'namespace' => 'Api'], function () {
+	Route::controller('device', 'DeviceController');
+	Route::controller('push', 'PushController');
 });
