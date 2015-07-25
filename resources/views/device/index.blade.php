@@ -68,5 +68,12 @@
     </div>
     </div>
 </div>
-@include('component.fab')
+<div class="fbtn-container">
+    <div class="fbtn-inner">
+        <a class="fbtn fbtn-red fbtn-lg" href="{{ url('device/bind') }}">
+            <span class="fbtn-text">绑定设备</span><span class="fbtn-ori icon">add</span><span class="fbtn-sub icon">close</span>
+        </a>
+
+    </div>
+</div>
 @endsection

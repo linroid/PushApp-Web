@@ -333,7 +333,10 @@
 // tab switch indicator
 	$('.tab-nav').each(function() {
 		$(this).append('<div class="tab-nav-indicator"></div>');
-		tabSwitch($('.nav > li.active', $(this)), null);
+		if($('.nav > li.active', $(this)).length>0) {
+			console.log($('.nav > li.active', $(this)));
+			tabSwitch($('.nav > li.active', $(this)), null);
+		}
 	});
 // tile
 	$(document).on('click', function(e) {
@@ -532,7 +535,9 @@
 
 				// tab indicator
 					$('.tab-nav').each(function() {
-						tabSwitch($('.nav > li.active', $(this)), null);
+						if($('.nav > li.active', $(this)).length>0) {
+							tabSwitch($('.nav > li.active', $(this)), null);
+						}
 					});
 
 				// tile wrap animation
@@ -576,7 +581,9 @@
 
 		// tab switch
 			$('.tab-nav').each(function() {
-				tabSwitch($('.nav > li.active', $(this)), null);
+				if($('.nav > li.active', $(this)).length>0) {
+					tabSwitch($('.nav > li.active', $(this)), null);
+				}
 			});
 
 		// tile in view
