@@ -29,9 +29,9 @@ class DeviceController extends ApiController {
 		 */
 		$bindToken = BindToken::whereValue($token)->where('expire_in', '>', new Carbon())->first();
 		if ($bindToken) {
-			$existsDevice = Device::whereDeviceId($deviceId)->whereUserId($bindToken->user_id)->first();
-			if ($existsDevice) {
-				return $this->response->array($existsDevice);
+			$device = Device::whereDeviceId($deviceId)->whereUserId($bindToken->user_id)->first();
+			if ($device) {
+				return $this->response->array($device);
 			}
 			return $this->response->noContent();
 		}
@@ -46,24 +46,27 @@ class DeviceController extends ApiController {
 		 */
 		$bindToken = BindToken::whereValue($token)->where('expire_in', '>', new Carbon())->first();
 		if ($bindToken) {
-			$exists = Device::whereDeviceId(Input::get('device_id'))->with('user')->whereUserId($bindToken->user_id)->first();
-			if ($exists) {
-				$exists->fill($data);
-				$exists->save();
-				return $this->response->array($exists->toArray());
+			$device = Device::whereDeviceId(Input::get('device_id'))->with('user')->whereUserId($bindToken->user_id)->first();
+			if ($device) {
+				$device->fill($data);
+				$device->save();
+			}else {
+				$validator = Validator::make($data, Device::rules($bindToken->user_id), Device::messages());
+				if ($validator->fails()) {
+					return $this->response->error($validator->errors(), 400);
+				}
+				$device = new Device($data);
+				$device->token = str_random(64);
+				$device->user_id = $bindToken->user_id;
+				$device->save();
+				$device->user;
 			}
-			$validator = Validator::make($data, Device::rules($bindToken->user_id), Device::messages());
-//			$validator->after(function (Validator $validator) {
-//			});
-			if ($validator->fails()) {
-				return $this->response->error($validator->errors(), 400);
-			}
-			$device = new Device($data);
-			$device->token = str_random(64);
-			$device->user_id = $bindToken->user_id;
-			$device->save();
-			$device->user;
-			return $this->response->array($device->toArray());
+
+			return $this->response->array([
+				'device'    => $device->toArray(),
+			    'user'      => $device->user()
+			]);
+
 
 		}
 		$this->response->error(Lang::get("errors.expired_token"), 401);
