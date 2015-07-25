@@ -24,7 +24,7 @@
                 <a class="waves-effect waves-light"  href="{{ url('/') }}">安装</a>
             </li>
             <li {!! $is_active('device') !!}>
-                <a class="waves-effect waves-light"  href="{{ url('/device') }}#ff">设备</a>
+                <a class="waves-effect waves-light"  href="{{ url('/device') }}">设备</a>
             </li>
             <li {!! $is_active('history') !!}>
                 <a class="waves-effect waves-light"  href="{{ url('/history') }}">历史</a>

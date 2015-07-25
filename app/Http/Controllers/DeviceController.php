@@ -10,6 +10,7 @@ namespace app\Http\Controllers;
 
 
 use App\BindToken;
+use App\Device;
 use Auth;
 use View;
 
@@ -24,7 +25,8 @@ class DeviceController extends Controller {
 	}
 
 	public function getIndex() {
-
+		$devices = Device::whereUserId(Auth::id())->paginate(24);
+		return View::make('device.index')->with('devices', $devices);
 	}
 	public function getBind() {
 		$token = BindToken::obtain(Auth::user());

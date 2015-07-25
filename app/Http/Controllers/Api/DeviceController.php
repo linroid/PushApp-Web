@@ -18,11 +18,14 @@ use Response;
 use Validator;
 
 class DeviceController extends ApiController {
+	public function getIndex() {
+		return Response::json(Device::paginate(30));
+	}
 
 	public function getCheck() {
 		$token = Input::get('token');
 		$deviceId = Input::get('device_id');
-		if(empty($token)){
+		if (empty($token)) {
 			return Response::error(Lang::get('errors.illegal_access'), 400);
 		}
 		/**
@@ -51,7 +54,8 @@ class DeviceController extends ApiController {
 			if ($device) {
 				$device->fill($data);
 				$device->save();
-			}else {
+			}
+			else {
 				$validator = Validator::make($data, Device::rules($bindToken->user_id), Device::messages());
 				if ($validator->fails()) {
 					return Response::errors($validator->errors(), 400);
@@ -64,8 +68,8 @@ class DeviceController extends ApiController {
 			}
 
 			return Response::json([
-				'device'    => $device,
-			    'user'      => $device
+				'device' => $device,
+				'user' => $device
 			]);
 
 
