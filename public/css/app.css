@@ -1,0 +1,58 @@
+.hidden {
+  display: none;
+}
+.upload-box {
+  position: absolute;
+  width: 100%;
+  height: 240px;
+  border: dashed 3px #666666;
+  top: 40px;
+  background-color: white;
+}
+.upload-box h2 {
+  position: relative;
+  top: 20px;
+}
+.upload-box button {
+  position: absolute;
+  top: 120px;
+  left: 40%;
+}
+
+.dz-preview{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+  color: white;
+}
+.dz-success-mark{
+  position: absolute;
+  top: 110px;
+  right: 30px;
+  font-size: 20px;
+}
+#upload .progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin-top: 0px;
+  background-color: transparent;
+}
+#upload .progress .progress-bar {
+  background-color: #2196f3;
+}
+#upload img {
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+}
+/*#upload .drag-tip {*/
+  /*position: absolute;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*top: 0;*/
+  /*background-color: #0086b3;*/
+  /*color: white;*/
+/*}*/

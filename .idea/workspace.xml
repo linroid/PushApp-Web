@@ -1,0 +1,1516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="848bd767-b605-4551-9ce7-29b49881081b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Listeners/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/vendor/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/META-INF/CERT.RSA" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/fonts/MaterialIcons-Regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/fonts/MaterialIcons-Regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/fonts/MaterialIcons-Regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/fonts/MaterialIcons-Regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_000.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_000.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_015.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_015.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_000.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_015.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-hdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-mdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-xhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-xxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-xxxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_ic_clear_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_ic_clear_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_ic_clear_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_ic_clear_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_ic_clear_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_ic_go_search_api_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_ic_go_search_api_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_ic_go_search_api_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_ic_go_search_api_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_ic_menu_share_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_ic_menu_share_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_ic_search_api_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_ic_search_api_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_ic_search_api_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_ic_search_api_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_ic_search_api_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_list_divider_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_list_divider_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_list_focused_holo.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_list_focused_holo.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_list_focused_holo.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_list_focused_holo.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_list_longpressed_holo.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_list_longpressed_holo.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_list_pressed_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_popup_background_mtrl_mult.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_popup_background_mtrl_mult.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_popup_background_mtrl_mult.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-ldrtl-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_switch_track_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_switch_track_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_text_cursor_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_text_cursor_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_text_cursor_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_text_cursor_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_textfield_activated_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/android.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/apks/2015/07/22/d41d8cd98f00b204e9800998ecf8427e/app-debug-unaligned.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/apks/2015/07/22/d41d8cd98f00b204e9800998ecf8427e/app-debug.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/users/avatar-001.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/classes.dex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/fonts/fontawesome-webfont.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-hdpi-v4/ic_action_refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-mdpi-v4/ic_action_refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xhdpi-v4/ic_action_refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable-xxhdpi-v4/ic_action_refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/mipmap-hdpi-v4/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/mipmap-mdpi-v4/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/mipmap-xhdpi-v4/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/mipmap-xxhdpi-v4/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/apks/2015/07/22/d41d8cd98f00b204e9800998ecf8427e/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/samples/landscape.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/screenshots/material01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/screenshots/material02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/screenshots/material03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/samples/portrait.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/resources.arsc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.env.example" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitattributes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/cache/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/apks/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/app/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/debugbar/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/framework/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/framework/cache/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/framework/views/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/logs/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.phpstorm.meta.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2015_07_22_081635_create_social_accounts_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2015_07_22_161756_create_packages_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2015_07_23_221135_create_devices_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2015_07_23_232340_create_device_groups_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2015_07_24_200437_create_bind_tokens_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/errors/500.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/errors/503.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ApiController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/BindToken.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/META-INF/CERT.SF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Device.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/DeviceController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/DeviceController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Middleware/DeviceCountCheck.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Providers/DeviceProvider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Events/Event.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/ExampleTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Console/Commands/Inspire.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/InstallController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Jobs/Job.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/factories/ModelFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Package.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/PasswordController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/PushApp.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/PushController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Requests/Request.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/SocialAccount.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/TestCase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/User.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/src/_.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_action_bar_title_item.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_action_bar_up_container.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_action_bar_view_list_nav_layout.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_action_menu_item_layout.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_action_menu_layout.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_action_mode_bar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_action_mode_close_item_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_activity_chooser_view.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_activity_chooser_view_list_item.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_alert_dialog_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout-v17/abc_alert_dialog_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/color/abc_background_cache_hint_selector_material_dark.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/color-v11/abc_background_cache_hint_selector_material_dark.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/color/abc_background_cache_hint_selector_material_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/color-v11/abc_background_cache_hint_selector_material_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_btn_borderless_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_btn_check_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_btn_default_mtrl_shape.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_btn_radio_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_cab_background_internal_bg.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_cab_background_top_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_dialog_material_background_dark.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_dialog_material_background_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_dialog_title_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout-v17/abc_dialog_title_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_edit_text_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_expanded_menu_layout.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/anim/abc_fade_in.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/anim/abc_fade_out.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/anim/abc_grow_fade_in_from_bottom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_item_background_holo_dark.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_item_background_holo_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_list_menu_item_checkbox.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_list_menu_item_icon.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_list_menu_item_layout.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_list_menu_item_radio.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_list_selector_background_transition_holo_dark.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_list_selector_background_transition_holo_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_list_selector_holo_dark.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_list_selector_holo_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/anim/abc_popup_enter.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/anim/abc_popup_exit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_popup_menu_item_layout.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/color/abc_primary_text_disable_only_material_dark.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/color/abc_primary_text_disable_only_material_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/color/abc_primary_text_material_dark.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/color/abc_primary_text_material_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_ratingbar_full_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_screen_content_include.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_screen_simple.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_screen_simple_overlay_action_mode.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_screen_toolbar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout-v21/abc_screen_toolbar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_search_dropdown_item_icons_2line.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/color/abc_search_url_text.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_search_view.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout-v17/abc_search_view.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/color/abc_secondary_text_material_dark.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/color/abc_secondary_text_material_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_select_dialog_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/anim/abc_shrink_fade_out_from_bottom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/abc_simple_dropdown_hint.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/anim/abc_slide_in_bottom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/anim/abc_slide_in_top.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/anim/abc_slide_out_bottom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/anim/abc_slide_out_top.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_spinner_textfield_background_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_switch_thumb_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_tab_indicator_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/abc_textfield_search_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/activity_home.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout-v21/activity_home.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/api.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/app.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/app.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/sass/app.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/artisan" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/auth.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/autoload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/base.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/base.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/base.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/base.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/device/bind.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/blade.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/src/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/broadcasting.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/cache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/compile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/src/content.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/database.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/src/datepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/debugbar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/design_navigation_item.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/design_navigation_item_header.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/design_navigation_item_separator.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/design_navigation_item_subheader.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/design_navigation_menu.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/src/dropdown.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/dropzone.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/src/esc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/component/fab.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/fab_background.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/anim/fab_in.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/anim/fab_out.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/filesystems.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/component/flashes.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/fonts/fontawesome-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/src/footer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/src/form-adv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/fragment_app.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/fragment_device.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/fragment_refreshable.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/src/get-target.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/src/header.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/menu/home.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/html5shiv.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/ide-helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/install/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/item_app.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/item_push.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/layout_snackbar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout-sw600dp-v13/layout_snackbar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/layout_snackbar_include.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout-v17/layout_snackbar_include.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/linroid.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/mail.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/src/menu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/src/modal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/component/navigation.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/notification_media_action.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/notification_media_cancel_action.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/notification_template_big_media.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout-v17/notification_template_big_media.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/notification_template_big_media_narrow.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout-v17/notification_template_big_media_narrow.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/notification_template_lines.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout-v17/notification_template_lines.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/notification_template_media.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout-v17/notification_template_media.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/notification_template_part_chronometer.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout-v17/notification_template_part_chronometer.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/notification_template_part_time.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout-v17/notification_template_part_time.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/auth/password.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/emails/password.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpspec.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpunit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/project.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/project.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/project.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/project.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/queue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/auth/reset.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/respond.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/robots.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/select_dialog_item_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/select_dialog_multichoice_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/select_dialog_singlechoice_material.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/services.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/session.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/drawable/snackbar_background.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/anim/snackbar_in.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/anim/snackbar_out.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/layout/support_simple_spinner_dropdown_item.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/color/switch_thumb_material_dark.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/extract_folder/res/color/switch_thumb_material_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/src/tab.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/src/tile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/src/toast.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/component/user.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/src/wave.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/src/webfont.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/welcome.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/src/winresize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="PushApp.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="FLATTEN" value="false" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - PushApp@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="PushApp" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="DeviceController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/DeviceController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-22.625">
+              <caret line="61" column="39" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+              <folding>
+                <element signature="e#126#144#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="errors.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/lang/en/errors.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.0">
+              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+              <folding>
+                <element signature="e#6#86#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/lang/en/auth.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeviceController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DeviceController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.375">
+              <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Device.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Device.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.416667">
+              <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/app.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.125">
+              <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/lang/zh-CN/auth.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.375">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messages.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/lang/zh-CN/messages.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.17699115">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+              <folding>
+                <element signature="e#6#86#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApiController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ApiController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.5">
+              <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+              <folding>
+                <element signature="e#126#154#0#PHP" expanded="true" />
+                <marker date="1437809708000" expanded="true" signature="338:475" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Helpers.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Routing/Helpers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.416667">
+              <caret line="160" column="23" selection-start-line="160" selection-start-column="23" selection-end-line="160" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/resources/views/fab.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/send.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/navigation.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/install.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
+        <option value="$PROJECT_DIR$/resources/views/install/install.blade.php" />
+        <option value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/CodeCoverage/Report/HTML/Renderer/Template/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/app/SocialAccount.php" />
+        <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/errors/404.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/errors/500.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/app.css" />
+        <option value="$PROJECT_DIR$/resources/views/component/navigation.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/install/index.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_07_22_081635_create_social_accounts_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_07_22_161756_create_packages_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/device/device.blade.php" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/PushController.php" />
+        <option value="$PROJECT_DIR$/app/Package.php" />
+        <option value="$PROJECT_DIR$/bootstrap/autoload.php" />
+        <option value="$PROJECT_DIR$/bootstrap/app.php" />
+        <option value="$PROJECT_DIR$/config/api.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/DeviceController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_07_24_200437_create_bind_tokens_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/device/bind.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/DeviceCountCheck.php" />
+        <option value="$PROJECT_DIR$/.env.example" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" />
+        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
+        <option value="$PROJECT_DIR$/storage/logs/laravel.log" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/config/services.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Providers/DeviceProvider.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/InstallController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_07_23_221135_create_devices_table.php" />
+        <option value="$PROJECT_DIR$/app/Device.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ApiController.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/app/BindToken.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/DeviceController.php" />
+        <option value="$PROJECT_DIR$/resources/lang/en/errors.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/resources/lang/zh-CN/messages.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <gulpfiles>
+      <GulpfileState>
+        <gulpfile-path>$PROJECT_DIR$/gulpfile.js</gulpfile-path>
+      </GulpfileState>
+    </gulpfiles>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="pushapp.io.127.0.0.1.xip.io" id="9d634217-5085-4cba-87b8-a198afbc2550" name="pushapp.io.127.0.0.1.xip.io" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zh-CN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bookstore/composer.json" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="preferences.sourceCode.PHP" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FullScreen" value="true" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="php.override.implement.member.chooser.php.doc" value="COPY_ALWAYS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/lang" />
+      <recent name="$PROJECT_DIR$/storage/apks" />
+      <recent name="$PROJECT_DIR$/resources/views/device" />
+      <recent name="$PROJECT_DIR$/resources/views/errors" />
+      <recent name="$PROJECT_DIR$/public/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/home" />
+      <recent name="$PROJECT_DIR$/resources/views/install" />
+      <recent name="$PROJECT_DIR$/resources/views/component" />
+      <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHP Web Application.pushapp.io.127.0.0.1.xip.io">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="pushapp.io.127.0.0.1.xip.io" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="pushapp.io.127.0.0.1.xip.io">
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="PHP Web Application.pushapp.io.127.0.0.1.xip.io" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="848bd767-b605-4551-9ce7-29b49881081b" name="Default" comment="" />
+      <created>1437477044319</created>
+      <option name="number" value="Default" />
+      <updated>1437477044319</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32739726" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.6389338" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.33013698" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23505655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.329235" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
+          <line>59</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
+          <line>47</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
+          <line>55</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
+          <line>56</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="22" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/config/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/device/bind.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/DeviceCountCheck.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.875">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.958333">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.25">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.example">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_ide_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36617646">
+          <caret line="1368" column="50" selection-start-line="1368" selection-start-column="50" selection-end-line="1368" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.083334">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62222224">
+          <caret line="11101" column="82" selection-start-line="11101" selection-start-column="80" selection-end-line="11101" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.75">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.22727273">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.22727273">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/apks/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.22727273">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/EventServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/RouteServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.0">
+          <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.75">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.0">
+          <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/DeviceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.875">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="24" selection-end-column="1" />
+          <folding>
+            <element signature="e#115#130#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding>
+            <element signature="e#7#392#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-75.0">
+          <caret line="139" column="16" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.125">
+          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.375">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InstallController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.75">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_07_24_200437_create_bind_tokens_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_07_23_232340_create_device_groups_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_07_23_221135_create_devices_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.375">
+          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Package.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Response.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13274336">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-41.875">
+          <caret line="77" column="7" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Provider/ApiServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.1681414">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Http/Response.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3318584">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="14" />
+          <folding>
+            <element signature="e#34#50#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/validation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27138644">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.25">
+          <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Device.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.416667">
+          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DeviceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.375">
+          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/BindToken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7345133">
+          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Routing/Helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.416667">
+          <caret line="160" column="23" selection-start-line="160" selection-start-column="23" selection-end-line="160" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <element signature="e#126#154#0#PHP" expanded="true" />
+            <marker date="1437809708000" expanded="true" signature="338:475" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/DeviceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.625">
+          <caret line="61" column="39" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+          <folding>
+            <element signature="e#126#144#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/errors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.125">
+          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/zh-CN/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.375">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/zh-CN/messages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17699115">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
