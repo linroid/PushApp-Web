@@ -151,6 +151,7 @@ return [
 		SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
 
 		App\Providers\ResponseMacroServiceProvider::class,
+		App\Providers\JPushProvider::class,
 	],
 
 	/*

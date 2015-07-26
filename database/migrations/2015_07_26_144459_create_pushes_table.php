@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePackagesTable extends Migration
+class CreatePushesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,22 +12,25 @@ class CreatePackagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('packages', function(Blueprint $table) {
+        Schema::create('pushes', function(Blueprint $table){
             $table->increments('id');
-            $table->string('package_name');
-            $table->string('app_name');
-            $table->string('version_name');
-            $table->unsignedInteger('version_code');
-            $table->unsignedTinyInteger('sdk_level');
+            $table->unsignedInteger('sendno');
+            $table->unsignedInteger('msg_id');
+            $table->boolean('is_ok');
+            $table->unsignedInteger('package_id');
+            $table->foreign('package_id')
+                ->references('id')
+                ->on('packages')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
             $table->unsignedInteger('user_id');
-            $table->string('icon');
-            $table->string('path');
-            $table->timestamps();
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
+            $table->timestamps();
+
         });
     }
 
@@ -38,6 +41,6 @@ class CreatePackagesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('packages');
+        Schema::drop('pushes');
     }
 }

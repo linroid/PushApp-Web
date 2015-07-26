@@ -43,13 +43,13 @@ use Input;
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereUserId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereUpdatedAt($value)
- * @property string $push_id 
+ * @property string $push_id
  * @method static \Illuminate\Database\Query\Builder|\App\Device wherePushId($value)
  */
 class Device extends Model {
 	private static $device;
 	protected $hidden = ['user'];
-	protected $fillable = ["model", "alias", "sdk_level", "os_name", "height",
+	protected $fillable = ["model", "alias", "sdk_level", "os_name", "height", 'push_id',
 	                       "width", "dpi", "device_id", "memory_size", "cpu_type", "network_type"];
 
 	/**

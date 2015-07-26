@@ -31,10 +31,24 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $version_name
  * @method static \Illuminate\Database\Query\Builder|\App\Package whereVersionName($value)
  * @property-read \App\User $user
+ * @property string $path
+ * @property-read mixed $download_url
+ * @method static \Illuminate\Database\Query\Builder|\App\Package wherePath($value)
  */
 class Package extends Model
 {
+	protected $hidden = ['path'];
+	protected $appends = ['download_url'];
 	public function user(){
 		return $this->hasOne('App\User', 'id', 'user_id');
+	}
+	public function getIconAttribute() {
+		return $this->getAssetUrl('icon');
+	}
+	public function getDownloadUrlAttribute() {
+		return $this->getAssetUrl('path');
+	}
+	private function getAssetUrl($attribute){
+		return url(env('APK_ROOT')).'/'.$this->attributes[$attribute];
 	}
 }

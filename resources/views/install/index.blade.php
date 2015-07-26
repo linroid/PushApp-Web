@@ -52,7 +52,7 @@
                     <div class="dz-size text-center" data-dz-size></div>
                 </div>
 
-                <div class="dz-success-mark pull-right"><span>成功 :)</span></div>
+                <div class="dz-success-mark pull-right"><span>:)</span></div>
                 {{--<div class="dz-error-mark text-red"><span>上传失败:(</span></div>--}}
                 {{--<div class="dz-error-message text-red"><span data-dz-errormessage></span></div>--}}
             </div>
