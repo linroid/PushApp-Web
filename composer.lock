@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "97e8357136feaeaecd71cc5c125c6eb4",
+    "hash": "9c1c1fe1baee0076868673f3ca537c1d",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -274,133 +274,6 @@
                 "utils"
             ],
             "time": "2015-07-23 00:54:12"
-        },
-        {
-            "name": "dingo/api",
-            "version": "v0.9.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dingo/api.git",
-                "reference": "8160dfb0acf3cbdd66bfc8cddf4cbb4288dbcfb9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dingo/api/zipball/8160dfb0acf3cbdd66bfc8cddf4cbb4288dbcfb9",
-                "reference": "8160dfb0acf3cbdd66bfc8cddf4cbb4288dbcfb9",
-                "shasum": ""
-            },
-            "require": {
-                "dingo/blueprint": "0.1.*",
-                "doctrine/annotations": "1.2.*",
-                "illuminate/routing": "5.1.*",
-                "illuminate/support": "5.1.*",
-                "league/fractal": "0.12.*",
-                "php": ">=5.5.9",
-                "phpdocumentor/reflection-docblock": "2.0.*"
-            },
-            "require-dev": {
-                "illuminate/auth": "5.1.*",
-                "illuminate/cache": "5.1.*",
-                "illuminate/console": "5.1.*",
-                "illuminate/database": "5.1.*",
-                "illuminate/events": "5.1.*",
-                "illuminate/filesystem": "5.1.*",
-                "illuminate/pagination": "5.1.*",
-                "laravel/lumen-framework": "5.1.*",
-                "lucadegasperi/oauth2-server-laravel": "4.1.*",
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~2.0",
-                "tymon/jwt-auth": "0.5.*"
-            },
-            "suggest": {
-                "lucadegasperi/oauth2-server-laravel": "Protect your API with OAuth 2.0.",
-                "tymon/jwt-auth": "Protect your API with JSON Web Tokens"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.9-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Dingo\\Api\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Jason Lewis",
-                    "email": "jason.lewis1991@gmail.com"
-                }
-            ],
-            "description": "A RESTful API package for the Laravel and Lumen frameworks.",
-            "keywords": [
-                "api",
-                "dingo",
-                "laravel",
-                "restful"
-            ],
-            "time": "2015-07-19 04:07:42"
-        },
-        {
-            "name": "dingo/blueprint",
-            "version": "v0.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dingo/blueprint.git",
-                "reference": "3389bcf154711c5eae06256b05c7c4d9ddc43995"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dingo/blueprint/zipball/3389bcf154711c5eae06256b05c7c4d9ddc43995",
-                "reference": "3389bcf154711c5eae06256b05c7c4d9ddc43995",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/annotations": "1.2.*",
-                "illuminate/support": "5.1.*",
-                "php": ">=5.5.9",
-                "phpdocumentor/reflection-docblock": "2.0.*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~2.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Dingo\\Blueprint\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Jason Lewis",
-                    "email": "jason.lewis1991@gmail.com"
-                }
-            ],
-            "description": "API Blueprint documentation generator.",
-            "keywords": [
-                "api",
-                "blueprint",
-                "dingo",
-                "docs",
-                "laravel"
-            ],
-            "time": "2015-07-17 11:26:22"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1430,6 +1303,70 @@
             "time": "2015-03-11 20:06:43"
         },
         {
+            "name": "jpush/jpush",
+            "version": "v3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jpush/jpush-api-php-client.git",
+                "reference": "0d25659697a3644f17bb0e5903a421fe48c47796"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jpush/jpush-api-php-client/zipball/0d25659697a3644f17bb0e5903a421fe48c47796",
+                "reference": "0d25659697a3644f17bb0e5903a421fe48c47796",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "1.*",
+                "nategood/httpful": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "jpush": "src/"
+                },
+                "files": [
+                    "src/JPush/Model/Audience.php",
+                    "src/JPush/Model/Message.php",
+                    "src/JPush/Model/Notification.php",
+                    "src/JPush/Model/Options.php",
+                    "src/JPush/Model/Platform.php",
+                    "src/JPush/Model/PushPayload.php",
+                    "src/JPush/Model/PushResponse.php",
+                    "src/JPush/Model/ReportResponse.php",
+                    "src/JPush/Model/MessageResponse.php",
+                    "src/JPush/Model/MessageAndroid.php",
+                    "src/JPush/Model/MessageIOS.php",
+                    "src/JPush/Model/MessageItem.php",
+                    "src/JPush/Model/UserResponse.php",
+                    "src/JPush/Model/DeviceResponse.php",
+                    "src/JPush/Model/Report.php",
+                    "src/JPush/JPushClient.php",
+                    "src/JPush/JPushLog.php",
+                    "src/JPush/Exception/APIConnectionException.php",
+                    "src/JPush/Exception/APIRequestException.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache"
+            ],
+            "authors": [
+                {
+                    "name": "JPush",
+                    "email": "support@jpush.cn",
+                    "homepage": "https://www.jpush.cn/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "JPush API PHP Client",
+            "homepage": "http://docs.jpush.cn/display/dev/Push-API-v3",
+            "time": "2014-10-30 08:09:51"
+        },
+        {
             "name": "laravel/framework",
             "version": "v5.1.8",
             "source": {
@@ -1691,69 +1628,6 @@
                 "storage"
             ],
             "time": "2015-07-21 19:35:53"
-        },
-        {
-            "name": "league/fractal",
-            "version": "0.12.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/fractal.git",
-                "reference": "0a51dcb6398dc2377d086210d0624996a1df8322"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/fractal/zipball/0a51dcb6398dc2377d086210d0624996a1df8322",
-                "reference": "0a51dcb6398dc2377d086210d0624996a1df8322",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4"
-            },
-            "require-dev": {
-                "illuminate/contracts": "~5.0",
-                "mockery/mockery": "~0.9",
-                "pagerfanta/pagerfanta": "~1.0.0",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~1.5",
-                "zendframework/zend-paginator": "~2.3"
-            },
-            "suggest": {
-                "illuminate/pagination": "The Illuminate Pagination component.",
-                "pagerfanta/pagerfanta": "Pagerfanta Paginator",
-                "zendframework/zend-paginator": "Zend Framework Paginator"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.13-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\Fractal\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Phil Sturgeon",
-                    "email": "me@philsturgeon.uk",
-                    "homepage": "http://philsturgeon.uk/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Handle the output of complex data structures ready for API output.",
-            "homepage": "http://fractal.thephpleague.com/",
-            "keywords": [
-                "api",
-                "json",
-                "league",
-                "rest"
-            ],
-            "time": "2015-03-19 15:16:43"
         },
         {
             "name": "league/oauth1-client",
@@ -2089,32 +1963,30 @@
             "time": "2015-01-11 23:07:46"
         },
         {
-            "name": "namshi/jose",
-            "version": "5.0.2",
+            "name": "nategood/httpful",
+            "version": "0.2.19",
             "source": {
                 "type": "git",
-                "url": "https://github.com/namshi/jose.git",
-                "reference": "8c7eba486f74c014ea1d8faedafe5109a31ea95b"
+                "url": "https://github.com/nategood/httpful.git",
+                "reference": "bd73f89d34d8f879c54ac46eb94b0f7be1d00820"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namshi/jose/zipball/8c7eba486f74c014ea1d8faedafe5109a31ea95b",
-                "reference": "8c7eba486f74c014ea1d8faedafe5109a31ea95b",
+                "url": "https://api.github.com/repos/nategood/httpful/zipball/bd73f89d34d8f879c54ac46eb94b0f7be1d00820",
+                "reference": "bd73f89d34d8f879c54ac46eb94b0f7be1d00820",
                 "shasum": ""
             },
             "require": {
-                "lib-openssl": "*",
-                "php": ">=5.3.3",
-                "phpseclib/phpseclib": "~0.3"
+                "ext-curl": "*",
+                "php": ">=5.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.5",
-                "satooshi/php-coveralls": "dev-master"
+                "phpunit/phpunit": "*"
             },
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "Namshi\\JOSE": "src/"
+                    "Httpful": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2123,20 +1995,22 @@
             ],
             "authors": [
                 {
-                    "name": "Alessandro Nadalin",
-                    "email": "alessandro.nadalin@gmail.com"
+                    "name": "Nate Good",
+                    "email": "me@nategood.com",
+                    "homepage": "http://nategood.com"
                 }
             ],
-            "description": "JSON Object Signing and Encryption library for PHP.",
+            "description": "A Readable, Chainable, REST friendly, PHP HTTP Client",
+            "homepage": "http://github.com/nategood/httpful",
             "keywords": [
-                "JSON Web Signature",
-                "JSON Web Token",
-                "JWS",
-                "json",
-                "jwt",
-                "token"
+                "api",
+                "curl",
+                "http",
+                "requests",
+                "rest",
+                "restful"
             ],
-            "time": "2015-06-29 05:41:44"
+            "time": "2015-03-08 15:22:23"
         },
         {
             "name": "nesbot/carbon",
@@ -2278,104 +2152,6 @@
                 }
             ],
             "time": "2015-02-03 12:10:50"
-        },
-        {
-            "name": "phpseclib/phpseclib",
-            "version": "0.3.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "d15bba1edcc7c89e09cc74c5d961317a8b947bf4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/d15bba1edcc7c89e09cc74c5d961317a8b947bf4",
-                "reference": "d15bba1edcc7c89e09cc74c5d961317a8b947bf4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.0.0"
-            },
-            "require-dev": {
-                "phing/phing": "~2.7",
-                "phpunit/phpunit": "~4.0",
-                "sami/sami": "~2.0",
-                "squizlabs/php_codesniffer": "~1.5"
-            },
-            "suggest": {
-                "ext-gmp": "Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.",
-                "ext-mcrypt": "Install the Mcrypt extension in order to speed up a wide variety of cryptographic operations.",
-                "pear-pear/PHP_Compat": "Install PHP_Compat to get phpseclib working on PHP < 4.3.3."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Crypt": "phpseclib/",
-                    "File": "phpseclib/",
-                    "Math": "phpseclib/",
-                    "Net": "phpseclib/",
-                    "System": "phpseclib/"
-                },
-                "files": [
-                    "phpseclib/Crypt/Random.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "include-path": [
-                "phpseclib/"
-            ],
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jim Wigginton",
-                    "email": "terrafrost@php.net",
-                    "role": "Lead Developer"
-                },
-                {
-                    "name": "Patrick Monnerat",
-                    "email": "pm@datasphere.ch",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Andreas Fischer",
-                    "email": "bantu@phpbb.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Hans-Jürgen Petrich",
-                    "email": "petrich@tronic-media.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "PHP Secure Communications Library - Pure-PHP implementations of RSA, AES, SSH2, SFTP, X.509 etc.",
-            "homepage": "http://phpseclib.sourceforge.net",
-            "keywords": [
-                "BigInteger",
-                "aes",
-                "asn.1",
-                "asn1",
-                "blowfish",
-                "crypto",
-                "cryptography",
-                "encryption",
-                "rsa",
-                "security",
-                "sftp",
-                "signature",
-                "signing",
-                "ssh",
-                "twofish",
-                "x.509",
-                "x509"
-            ],
-            "time": "2015-01-28 21:50:33"
         },
         {
             "name": "psr/http-message",
@@ -3439,69 +3215,6 @@
                 "parser"
             ],
             "time": "2015-06-11 18:39:40"
-        },
-        {
-            "name": "tymon/jwt-auth",
-            "version": "0.5.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tymondesigns/jwt-auth.git",
-                "reference": "fccf3f42742c21f8d0a132025e8d999308792ad9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tymondesigns/jwt-auth/zipball/fccf3f42742c21f8d0a132025e8d999308792ad9",
-                "reference": "fccf3f42742c21f8d0a132025e8d999308792ad9",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/http": "~5.0",
-                "illuminate/support": "~5.0",
-                "namshi/jose": "5.0.*",
-                "nesbot/carbon": "~1.0",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "illuminate/auth": "~5.0",
-                "illuminate/console": "~5.0",
-                "illuminate/database": "~5.0",
-                "mockery/mockery": "0.9.*",
-                "phpunit/phpunit": "4.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-develop": "0.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Tymon\\JWTAuth\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sean Tymon",
-                    "email": "tymon148@gmail.com",
-                    "homepage": "http://tymondesigns.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "JSON Web Token Authentication for Laravel 4 and 5",
-            "homepage": "https://github.com/tymondesigns/jwt-auth",
-            "keywords": [
-                "Authentication",
-                "JSON Web Token",
-                "auth",
-                "jwt",
-                "laravel",
-                "tymon"
-            ],
-            "time": "2015-06-23 22:34:08"
         },
         {
             "name": "vlucas/phpdotenv",

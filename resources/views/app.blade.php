@@ -52,7 +52,7 @@
 </footer>
 {{--@include('component.fab')--}}
 <script src="{{ asset('js/jquery.min.js') }}"></script>
-<script src="{{ asset('js/base.min.js') }}"></script>
+<script src="{{ asset('js/base.js') }}"></script>
 @yield('script')
 
 </body>

@@ -4,3 +4,4 @@ Homestead.yaml
 .env
 _ide_helper*
 .idea
+.phpstorm.meta.php

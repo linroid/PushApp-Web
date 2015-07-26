@@ -22,7 +22,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\BindToken whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\BindToken whereUpdatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\BindToken whereToken($value)
- * @property-read \App\User $user 
+ * @property-read \App\User $user
  * @method static \Illuminate\Database\Query\Builder|\App\BindToken whereValue($value)
  */
 class BindToken extends Model

@@ -43,6 +43,8 @@ use Input;
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereUserId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereUpdatedAt($value)
+ * @property string $push_id 
+ * @method static \Illuminate\Database\Query\Builder|\App\Device wherePushId($value)
  */
 class Device extends Model {
 	private static $device;
@@ -75,13 +77,15 @@ class Device extends Model {
 		return [
 			'device_id' => 'required',
 			'token' => 'exists:bind_tokens,value',
-			'alias' => 'required|min:3|unique:devices,alias,NULL,id,user_id,' . $user_id
+			'alias' => 'required|min:1|unique:devices,alias,NULL,id,user_id,' . $user_id,
+		    'push_id'=>'required|min:1'
 		];
 	}
 
 	public static function messages() {
 		return [
-			'alias.unique' => "已经有设备叫这个了\n换一个呗:)"
+			'alias.unique' => "已经有设备叫这个了\n换一个呗:)",
+		    'push_id.required'      => '初始化未完成，稍后再试试:('
 		];
 	}
 }
