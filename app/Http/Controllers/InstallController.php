@@ -10,6 +10,7 @@ namespace app\Http\Controllers;
 
 use App\Device;
 use App\Package;
+use App\Push;
 use Auth;
 use File;
 use Input;
@@ -38,24 +39,28 @@ class InstallController extends Controller {
 	public function postUpload() {
 		$package = $this->parseApk();
 
-		//waring For test
+		$devices = Device::all();
+		$installIds = $devices->pluck('push_id')->toArray();
 
-		$client = new JPushClient(env('JPUSH_APP_KEY'), env('JPUSH_APP_SECRET'));
+		$client = app('JPush\JPushClient');
 		$result = $client->push()
 			->setPlatform(M\all)
-			->setAudience(M\all)
-			->setNotification(M\notification('Hi, JPush'))
+			->setAudience(M\registration_id($installIds))
+			->setMessage(M\message($package->toJson(), null, "package"))
 			->send();
-		var_dump($result);
-		$msg_ids = $result->msg_id;
-		$result = $client->report($msg_ids);
-		var_dump($result);
-//		return Response::json($package);
+		$push = new Push();
+		$push->package_id = $package->id;
+		$push->user_id = 4;
+		$push->sendno = $result->sendno;
+		$push->msg_id = $result->msg_id;
+		$push->is_ok = $result->isOk;
+		$push->save();
+		return Response::json($package);
 	}
 	private function parseApk() {
 		$inputFile = Input::file('file');
 
-		$storage_root = env('APK_ROOT');
+		$storage_root = env('PACKAGE_ROOT');
 		$md5 = md5_file($inputFile->getPath());
 		$target_path = date('Y/m/d', time()).'/'.$md5;
 		$target_dir = $storage_root.'/'.$target_path;

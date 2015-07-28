@@ -26,7 +26,9 @@ return [
 	|
 	*/
 
-	'url' => env('HOST_URL', false),
+	'url' => env('APP_DEBUG', false) ?
+		'http://pushapp.'.get_server_ip().'.xip.io'
+		: env('HOST_URL', 'http://pushapp.'.get_server_ip().'.xip.io'),
 
 	/*
 	|--------------------------------------------------------------------------

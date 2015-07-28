@@ -22,6 +22,7 @@ if (config('app.debug')) {
 		Auth::loginUsingId(5, true);
 		return Redirect::to('/');
 	});
+	Route::controller('test', 'TestController');
 }
 
 Route::controller('/password', 'PasswordController');

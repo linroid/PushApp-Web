@@ -49,6 +49,6 @@ class Package extends Model
 		return $this->getAssetUrl('path');
 	}
 	private function getAssetUrl($attribute){
-		return url(env('APK_ROOT')).'/'.$this->attributes[$attribute];
+		return url(env('PACKAGE_ROOT')).'/'.$this->attributes[$attribute];
 	}
 }
