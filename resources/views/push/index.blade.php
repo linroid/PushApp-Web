@@ -63,6 +63,12 @@
                 </div>
             </div>
         @endforeach
-        <?php echo $pushes->render() ?>
+        <div class="col-lg-8 col-md-8 col-xs-12" >
+
+            <div class="pull-right">
+                <?php echo $pushes->render() ?>
+            </div>
+        </div>
+
     </div>
 @endsection
