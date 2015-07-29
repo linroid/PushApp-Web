@@ -25,6 +25,12 @@ class CreatePushDevicesTable extends Migration {
 				->on('pushes')
 				->onUpdate('cascade')
 				->onDelete('cascade');
+			$table->unsignedInteger('user_id');
+			$table->foreign('user_id')
+				->references('id')
+				->on('users')
+				->onUpdate('cascade')
+				->onDelete('cascade');
 			$table->timestamps();
 
 		});

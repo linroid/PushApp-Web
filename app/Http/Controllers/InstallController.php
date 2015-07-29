@@ -19,6 +19,7 @@ use JPush\JPushClient;
 use JPush\Model as M;
 use Redirect;
 use Response;
+use Session;
 use View;
 
 class InstallController extends Controller {
@@ -30,6 +31,9 @@ class InstallController extends Controller {
 		$this->middleware('device_count');
 		$this->middleware('auth');
 		View::share('active', 'install');
+		if (Session::has('package')) {
+			return Redirect::to('install/target', ['package', Session::pull('package')]);
+		}
 	}
 
 	public function getIndex() {
@@ -42,37 +46,55 @@ class InstallController extends Controller {
 	 */
 	public function postUpload() {
 		$inputFile = Input::file('file');
-
 		$storage_root = env('PACKAGE_ROOT');
-		$md5 = md5_file($inputFile->getPath());
+		$md5 = md5_file($inputFile->getPathname());
+		$size = $inputFile->getSize();;
 		$target_path = date('Y/m/d', time()) . '/' . $md5;
 		$target_dir = $storage_root . '/' . $target_path;
 		//判断是否重复
 		if (!File::exists($target_path)) {
 			$inputFile->move($target_dir, $inputFile->getClientOriginalName());
 		}
-
 		$apkFile = $target_dir . '/' . $inputFile->getClientOriginalName();
-		$apk = new \ApkParser\Parser($apkFile);
-		$manifest = $apk->getManifest();
-		$iconResourceId = $apk->getManifest()->getApplication()->getIcon();
-		$resources = $apk->getResources($iconResourceId);
-		//TODO 判断图标大小
-		$iconResource = $resources[count($resources) - 1];
-		File::put($target_dir . '/' . 'icon.png', stream_get_contents($apk->getStream($iconResource)));
-		$package = new Package();
-		//TODO 判断应用名语言
-		$package->app_name = $apk->getResources($manifest->getApplication()->getLabel())[0];
-		$package->version_name = $manifest->getVersionName();
-		$package->version_code = $manifest->getVersionCode();
-		$package->package_name = $manifest->getPackageName();
-		$package->sdk_level = $manifest->getMinSdkLevel();
+		$iconFile = $target_dir . '/icon.png';
+		$result = exec(sprintf('java -jar %s %s %s', app_path('Support/apk.jar'), $apkFile, $iconFile));
+		if ($result == 'error') {
+			return Response::error('解析出错，请检查安装包是否正确', 400);
+		}
+		$package = new Package(json_decode($result, true));
 		$package->path = $target_path . '/' . $inputFile->getClientOriginalName();
 		$package->icon = $target_path . '/icon.png';
 		$package->user_id = \Auth::id();
+		$package->md5 = $md5;
+		$package->file_size = $size;
 		$package->save();
-
 		return Response::json($package);
+
+//		//判断是否重复
+//		if (!File::exists($target_path)) {
+//			$inputFile->move($target_dir, $inputFile->getClientOriginalName());
+//		}
+//
+//		$apk = new \ApkParser\Parser($apkFile);
+//		$manifest = $apk->getManifest();
+//		$iconResourceId = $apk->getManifest()->getApplication()->getIcon();
+//		$resources = $apk->getResources($iconResourceId);
+//		//TODO 判断图标大小
+//		$iconResource = $resources[count($resources) - 1];
+//		File::put($target_dir . '/' . 'icon.png', stream_get_contents($apk->getStream($iconResource)));
+//		$package = new Package();
+//		//TODO 判断应用名语言
+//		$package->app_name = $apk->getResources($manifest->getApplication()->getLabel())[0];
+//		$package->version_name = $manifest->getVersionName();
+//		$package->version_code = $manifest->getVersionCode();
+//		$package->package_name = $manifest->getPackageName();
+//		$package->sdk_level = $manifest->getMinSdkLevel();
+//		$package->path = $target_path . '/' . $inputFile->getClientOriginalName();
+//		$package->icon = $target_path . '/icon.png';
+//		$package->user_id = \Auth::id();
+//		$package->save();
+//
+//		return Response::json($package);
 	}
 
 	/**
@@ -80,11 +102,19 @@ class InstallController extends Controller {
 	 */
 	public function postPush() {
 		$data = Input::all();
-		$package = Package::whereUserId(Auth::id())->findOrFail($data['package_id']);
+		if (Input::has('package_id')) {
+			$package = Package::whereUserId(Auth::id())->findOrFail($data['package_id']);
+		}
+		else {
+			$package = Package::whereMd5($data['package'])->orderBy('created_at', 'desc')->firstOrFail();
+		}
+
 		$devices_ids = Input::get('devices');
 		$devices = Device::whereUserId(Auth::id())->whereIn('id', $devices_ids)->get();
-
 		$installIds = $devices->pluck('push_id')->toArray();
+		if (count($installIds) == 0) {
+			return Redirect::back()->withToast('请选择至少一个设备');
+		}
 		$client = app('JPush\JPushClient');
 		$result = $client->push()
 			->setPlatform(M\all)
@@ -95,7 +125,7 @@ class InstallController extends Controller {
 		if ($result->isOk) {
 			$push = new Push();
 			$push->package_id = $package->id;
-			$push->user_id = 4;
+			$push->user_id = Auth::id();
 			$push->sendno = $result->sendno;
 			$push->msg_id = $result->msg_id;
 			$push->is_ok = $result->isOk;
@@ -106,18 +136,24 @@ class InstallController extends Controller {
 				$pd->device_id = $device->id;
 				$pd->push_id = $push->id;
 				$pd->status = 1;
+				$pd->user_id = Auth::id();
 				$pd->save();
 			}
-			return redirect('/')->withToast('提交成功，正在推送...');
+			return redirect('/install')->withToast('提交成功，正在推送...');
 		}
-		return Redirect::back()->with('flash_message', '推送失败,稍后再试试:(');
+		return Redirect::back()->withToast('推送失败,稍后再试试:(');
 	}
 
 	/**
 	 * 选择设备
 	 */
 	public function getTarget() {
-		$package = Package::whereUserId(Auth::id())->findOrFail(Input::get('package_id'));
+		if (Input::has('package_id')) {
+			$package = Package::whereUserId(Auth::id())->findOrFail(Input::get('package_id'));
+		}
+		else {
+			$package = Package::whereMd5(Input::get('package'))->orderBy('created_at', 'desc')->firstOrFail();
+		}
 		$devices = Device::whereUserId(Auth::id())->get();
 		return View::make('install.target')
 			->with('package', $package)

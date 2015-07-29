@@ -12,7 +12,7 @@
                     </a>
                 </div>
                 {{--<div class="menu-top-info-sub">--}}
-                    {{--<small>Some additional information about John Smith</small>--}}
+                {{--<small>Some additional information about John Smith</small>--}}
                 {{--</div>--}}
             </div>
             <div class="menu-content">

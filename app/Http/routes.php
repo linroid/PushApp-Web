@@ -15,6 +15,7 @@ Route::get('/', 'HomeController@getIndex');
 //Route::controller('/auth', 'AuthController');
 Route::get('/auth/social', 'AuthController@getSocial');
 Route::get('/auth/callback', 'AuthController@getCallback');
+Route::get('/auth/logout', 'AuthController@getLogout');
 
 //for debug only
 if (config('app.debug')) {
@@ -28,7 +29,7 @@ if (config('app.debug')) {
 Route::controller('/password', 'PasswordController');
 Route::controller('/install', 'InstallController');
 Route::controller('/device', 'DeviceController');
-Route::controller('/device/api', 'Api\DeviceController');
+Route::controller('/push', 'PushController');
 
 Route::group(['prefix' => 'api', 'namespace' => 'Api', 'middleware'=>'token'], function () {
 	Route::controller('device', 'DeviceController');

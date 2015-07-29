@@ -34,11 +34,15 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $path
  * @property-read mixed $download_url
  * @method static \Illuminate\Database\Query\Builder|\App\Package wherePath($value)
+ * @property string $md5
+ * @method static \Illuminate\Database\Query\Builder|\App\Package whereMd5($value)
+ * @property integer $file_size 
+ * @method static \Illuminate\Database\Query\Builder|\App\Package whereFileSize($value)
  */
 class Package extends Model
 {
 	protected $fillable = ['version_name', 'version_code', 'sdk_level', 'app_name', 'package_name'];
-	protected $hidden = ['path'];
+	protected $hidden = ['path', 'md5'];
 	protected $appends = ['download_url'];
 	public function user(){
 		return $this->hasOne('App\User', 'id', 'user_id');
