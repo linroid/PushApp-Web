@@ -34,4 +34,5 @@ class DeviceController extends Controller {
 			->with('token', $token);
 	}
 
+
 }

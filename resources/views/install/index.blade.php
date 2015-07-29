@@ -52,7 +52,21 @@
                     <div class="dz-size text-center" data-dz-size></div>
                 </div>
 
-                <div class="dz-success-mark pull-right"><span>:)</span></div>
+                <div class="dz-success-mark pull-right">
+                    <div class="progress-circular progress-circular-red">
+                        <div class="progress-circular-wrapper">
+                            <div class="progress-circular-inner">
+                                <div class="progress-circular-left">
+                                    <div class="progress-circular-spinner"></div>
+                                </div>
+                                <div class="progress-circular-gap"></div>
+                                <div class="progress-circular-right">
+                                    <div class="progress-circular-spinner"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {{--<div class="dz-error-mark text-red"><span>上传失败:(</span></div>--}}
                 {{--<div class="dz-error-message text-red"><span data-dz-errormessage></span></div>--}}
             </div>
@@ -75,6 +89,7 @@
             acceptedFiles: '.apk'
         });
         myDropzone.on("success", function (file, response) {
+            window.location.href = '{{url('install/target') }}?package_id='+response.id;
         });
         myDropzone.on("addedfile", function(file) {
             $('#upload').css('border', 'solid 3px #2196f3')
@@ -87,6 +102,9 @@
         });
         myDropzone.on("dragleave", function(file) {
             $('#upload').css('border', 'dashed 3px #666666')
+        });
+        myDropzone.on("error", function(file, response) {
+            $("body").toast({content: "上传出现错误咯:("})
         });
 
     </script>

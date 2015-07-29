@@ -14,12 +14,17 @@ use App\Device;
 use Carbon\Carbon;
 use Input;
 use Lang;
+use Request;
 use Response;
 use Validator;
 
 class DeviceController extends ApiController {
 	public function getIndex() {
-		return Response::json(Device::paginate(30));
+		$device = Device::current();
+		$devices = Device::whereUserId($device->user_id)
+			->where('id', '<>', $device->id)
+			->paginate(30);
+		return Response::json($devices);
 	}
 
 	public function getCheck() {
@@ -56,7 +61,7 @@ class DeviceController extends ApiController {
 				$device->save();
 			}
 			else {
-				$validator = Validator::make($data, Device::rules($bindToken->user_id), Device::messages());
+				$validator = Validator::make($data, Device::create_rules($bindToken->user_id), Device::messages());
 				if ($validator->fails()) {
 					return Response::errors($validator->errors(), 400);
 				}
@@ -77,4 +82,19 @@ class DeviceController extends ApiController {
 		return Response::error(Lang::get("errors.expired_token"), 401);
 	}
 
+	/**
+	 * 设备信息更新
+	 */
+	public function putIndex() {
+		$device = Device::current();
+		$data = Request::only(['alias', 'network_type']);
+
+		$validator = Validator::make($data, Device::update_rules($device->user_id), Device::messages());
+		if ($validator->fails()) {
+			return Response::errors($validator->errors(), 400);
+		}
+		$device->fill($data);
+		$device->save();
+		return Response::json($device);
+	}
 }

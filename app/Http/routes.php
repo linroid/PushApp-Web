@@ -30,7 +30,7 @@ Route::controller('/install', 'InstallController');
 Route::controller('/device', 'DeviceController');
 Route::controller('/device/api', 'Api\DeviceController');
 
-Route::group(['prefix' => 'api', 'namespace' => 'Api'], function () {
+Route::group(['prefix' => 'api', 'namespace' => 'Api', 'middleware'=>'token'], function () {
 	Route::controller('device', 'DeviceController');
 	Route::controller('push', 'PushController');
 });

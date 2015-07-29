@@ -43,6 +43,7 @@
 		</div>
 	</div>
 	@yield('content')
+
 </div>
 </div>
 <footer class="footer">
@@ -53,6 +54,7 @@
 {{--@include('component.fab')--}}
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('js/base.js') }}"></script>
+@include('component.toast')
 @yield('script')
 
 </body>

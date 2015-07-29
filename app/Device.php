@@ -57,6 +57,9 @@ class Device extends Model {
 	 * @return Device
 	 */
 	public static function current() {
+		if (self::$device == null) {
+			return static::attempt(Input::get('X-Token'));
+		}
 		return self::$device;
 	}
 
@@ -73,19 +76,25 @@ class Device extends Model {
 		return $this->hasOne('App\User', 'id', 'user_id');
 	}
 
-	public static function rules($user_id) {
+	public static function create_rules($user_id) {
 		return [
 			'device_id' => 'required',
-			'token' => 'exists:bind_tokens,value',
-			'alias' => 'required|min:1|unique:devices,alias,NULL,id,user_id,' . $user_id,
-		    'push_id'=>'required|min:1'
+			'token'     => 'exists:bind_tokens,value',
+			'alias'     => 'required|min:1|unique:devices,alias,NULL,id,user_id,' . $user_id,
+			'push_id'   => 'required|min:1'
+		];
+	}
+	public static function update_rules($user_id) {
+		return [
+			'alias'         => 'required|min:1|unique:devices,alias,NULL,id,user_id,' . $user_id,
+		    'network_type'  =>'in:unknown,mobile,wifi'
 		];
 	}
 
 	public static function messages() {
 		return [
-			'alias.unique' => "已经有设备叫这个了\n换一个呗:)",
-		    'push_id.required'      => '初始化未完成，稍后再试试:('
+			'alias.unique'      => "已经有设备叫这个了\n换一个呗:)",
+			'push_id.required'  => '初始化未完成，稍后再试试:('
 		];
 	}
 }

@@ -37,6 +37,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Package extends Model
 {
+	protected $fillable = ['version_name', 'version_code', 'sdk_level', 'app_name', 'package_name'];
 	protected $hidden = ['path'];
 	protected $appends = ['download_url'];
 	public function user(){

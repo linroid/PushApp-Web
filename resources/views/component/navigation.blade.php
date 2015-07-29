@@ -8,7 +8,7 @@
         }
     }
 ?>
-<header class="header">
+<header class="header header-transparent header-waterfall">
     {{--<ul class="nav nav-list pull-left">--}}
     {{--<li>--}}
     {{--<a data-toggle="menu" href="#menu">--}}

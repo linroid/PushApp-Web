@@ -3,14 +3,17 @@
         <div class="menu-wrap">
             <div class="menu-top">
                 <div class="menu-top-img">
-                    <img alt="{{ Auth::user()->nickname }}" src="{{ Auth::user()->avatar }}">
+                    <img alt="{{ Auth::user()->nickname }}" src="{{ asset('images/samples/landscape.jpg') }}">
                 </div>
                 <div class="menu-top-info">
-                    <a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="{{ Auth::user()->nickname }}" src="{{ Auth::user()->avatar }}"></span>{{ Auth::user()->nickname }}</a>
+                    <a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left">
+                            <img alt="{{ Auth::user()->nickname }}"
+                                 src="{{ Auth::user()->avatar }}"></span>{{ Auth::user()->nickname }}
+                    </a>
                 </div>
-                <div class="menu-top-info-sub">
-                    <small>Some additional information about John Smith</small>
-                </div>
+                {{--<div class="menu-top-info-sub">--}}
+                    {{--<small>Some additional information about John Smith</small>--}}
+                {{--</div>--}}
             </div>
             <div class="menu-content">
                 <ul class="nav">
