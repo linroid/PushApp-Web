@@ -11,6 +11,8 @@
 |
 */
 
+use App\User;
+
 Route::get('/', 'HomeController@getIndex');
 //Route::controller('/auth', 'AuthController');
 Route::get('/auth/social', 'AuthController@getSocial');
@@ -20,7 +22,7 @@ Route::get('/auth/logout', 'AuthController@getLogout');
 //for debug only
 if (config('app.debug')) {
 	Route::get('/auth/debug', function () {
-		Auth::loginUsingId(5, true);
+		Auth::loginUsingId(User::first()->id, true);
 		return Redirect::to('/');
 	});
 	Route::controller('test', 'TestController');
@@ -33,5 +35,5 @@ Route::controller('/push', 'PushController');
 
 Route::group(['prefix' => 'api', 'namespace' => 'Api', 'middleware'=>'token'], function () {
 	Route::controller('device', 'DeviceController');
-	Route::controller('push', 'PushController');
+	Route::controller('package', 'PackageController');
 });

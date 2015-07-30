@@ -19,10 +19,11 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\PushDevice wherePushId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\PushDevice whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\PushDevice whereUpdatedAt($value)
- * @property integer $user_id 
+ * @property integer $user_id
  * @method static \Illuminate\Database\Query\Builder|\App\PushDevice whereUserId($value)
  */
-class PushDevice extends Model
-{
-    //
+class PushDevice extends Model {
+	public function device() {
+	    return $this->hasOne('Device', 'id', 'device_id');
+	}
 }
