@@ -10,7 +10,7 @@
                         <div class="card-main">
                             <div class="card-header">
                                 <div class="card-header-side pull-left">
-                                    <img alt="{{ $package->app_name }}" src="{{ $package->icon }}">
+                                    <img alt="{{ $package->app_name }}" src="{{ $package->icon_url }}">
                                 </div>
                                 <div class="card-inner">
                                     <span>{{ $package->app_name }}</span>

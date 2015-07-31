@@ -23,6 +23,7 @@ class PackageController extends ApiController {
 			->join('push_devices', 'pushes.id', '=', 'push_devices.push_id')
 			->where('push_devices.device_id', '=', $device->id)
 			->orderBy('pushes.created_at', 'desc')
+			->groupBy('packages.id')
 			->paginate(30);
 		return Response::json($packages);
 //		var_dump($packages);

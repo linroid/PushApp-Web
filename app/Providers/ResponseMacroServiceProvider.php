@@ -24,7 +24,7 @@ class ResponseMacroServiceProvider extends ServiceProvider {
 			return Response::error($errors->first(), 400);
 		});
 		Response::macro('noContent', function() {
-			return Response::json();
+			return Response::make();
 		});
 	}
 
