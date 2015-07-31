@@ -136,7 +136,7 @@ class InstallController extends Controller {
 				$pd->device_id = $device->id;
 				$pd->push_id = $push->id;
 				$pd->status = 1;
-				$pd->user_id = Auth::id();
+//				$pd->user_id = Auth::id();
 				$pd->save();
 			}
 			return redirect('/install')->withToast('提交成功，正在推送...');

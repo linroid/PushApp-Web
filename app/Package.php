@@ -36,24 +36,27 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\Package wherePath($value)
  * @property string $md5
  * @method static \Illuminate\Database\Query\Builder|\App\Package whereMd5($value)
- * @property integer $file_size 
+ * @property integer $file_size
  * @method static \Illuminate\Database\Query\Builder|\App\Package whereFileSize($value)
  */
-class Package extends Model
-{
+class Package extends Model {
 	protected $fillable = ['version_name', 'version_code', 'sdk_level', 'app_name', 'package_name'];
-	protected $hidden = ['path', 'md5'];
-	protected $appends = ['download_url'];
-	public function user(){
+	protected $hidden = ['path', 'md5', 'icon'];
+	protected $appends = ['download_url', 'icon_url'];
+
+	public function user() {
 		return $this->hasOne('App\User', 'id', 'user_id');
 	}
-	public function getIconAttribute() {
+
+	public function getIconUrlAttribute() {
 		return $this->getAssetUrl('icon');
 	}
+
 	public function getDownloadUrlAttribute() {
 		return $this->getAssetUrl('path');
 	}
-	private function getAssetUrl($attribute){
-		return url(env('PACKAGE_ROOT')).'/'.$this->attributes[$attribute];
+
+	private function getAssetUrl($attribute) {
+		return url(env('PACKAGE_ROOT')) . '/' . $this->attributes[$attribute];
 	}
 }
