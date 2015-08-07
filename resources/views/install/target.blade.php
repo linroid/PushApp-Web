@@ -6,7 +6,7 @@
 
             <section class="content-inner">
                 {{--<h2 class="content-sub-heading">列表</h2>--}}
-                <form action="{{ url('install/push') }}" method="post" class="form">
+                <form action="{{ url('install/push') }}" method="post" class="form" id="target-form">
                     @if(Input::has('package'))
                         <input type="hidden" name="package" value="{{ $package->md5 }}"/>
                     @elseif(Input::has(('package_id')))
@@ -87,5 +87,10 @@
             var checkboxes = $(this).closest('form').find(':checkbox');
             checkboxes.prop('checked', false);
         });
+        @if($devices->count()==1)
+        $(function () {
+                    $('input[name="devices[]"]').attr("checked", "checked");
+                })
+        @endif
     </script>
 @endsection

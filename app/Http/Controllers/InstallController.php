@@ -139,7 +139,12 @@ class InstallController extends Controller {
 //				$pd->user_id = Auth::id();
 				$pd->save();
 			}
-			return redirect('/install')->withToast('提交成功，正在推送...');
+			if($devices->count()>1) {
+				$msg = "正在向{$devices->count()}台设备推送...";
+			} else {
+				$msg = "正在向{$devices->first()->alias}推送...";
+			}
+			return redirect('/install')->withToast($msg);
 		}
 		return Redirect::back()->withToast('推送失败,稍后再试试:(');
 	}
