@@ -25,7 +25,7 @@ class DeviceController extends Controller {
 	}
 
 	public function getIndex() {
-		$devices = Device::whereUserId(Auth::id())->paginate(24);
+		$devices = Device::whereUserId(Auth::id())->paginate(15);
 		return View::make('device.index')->with('devices', $devices);
 	}
 	public function getBind() {

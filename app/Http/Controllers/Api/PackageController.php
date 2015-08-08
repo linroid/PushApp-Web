@@ -21,7 +21,7 @@ class PackageController extends ApiController {
 			->where('push_devices.device_id', '=', $device->id)
 			->orderBy('pushes.created_at', 'desc')
 			->groupBy('packages.id')
-			->select('packages.*')
+			->select('packages.*', 'pushes.id as push_id')
 			->paginate(30);
 		return Response::json($packages);
 	}
