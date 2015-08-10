@@ -48,7 +48,7 @@ use Input;
  */
 class Device extends Model {
 	private static $device;
-	protected $hidden = ['user'];
+	protected $hidden = ['user', 'token'];
 	protected $fillable = ["model", "alias", "sdk_level", "os_name", "height", 'push_id',
 	                       "width", "dpi", "device_id", "memory_size", "cpu_type", "network_type"];
 

@@ -22,7 +22,7 @@ Route::get('/auth/logout', 'AuthController@getLogout');
 //for debug only
 if (config('app.debug')) {
 	Route::get('/auth/debug', function () {
-		Auth::loginUsingId(User::first()->id, true);
+		Auth::loginUsingId(1, true);
 		return Redirect::to('/');
 	});
 	Route::controller('test', 'TestController');

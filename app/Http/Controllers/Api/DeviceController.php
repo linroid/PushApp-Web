@@ -12,6 +12,7 @@ namespace app\Http\Controllers\Api;
 use App\BindToken;
 use App\Device;
 use Carbon\Carbon;
+use DB;
 use Input;
 use Lang;
 use Request;
@@ -23,7 +24,8 @@ class DeviceController extends ApiController {
 		$device = Device::current();
 		$devices = Device::whereUserId($device->user_id)
 			->where('id', '<>', $device->id)
-			->paginate(30);
+			->paginate(15);
+
 		return Response::json($devices);
 	}
 
@@ -69,12 +71,12 @@ class DeviceController extends ApiController {
 				$device->token = str_random(64);
 				$device->user_id = $bindToken->user_id;
 				$device->save();
-				$device->user;
 			}
 
 			return Response::json([
-				'device' => $device,
-				'user' => $device
+				'device'    => $device,
+				'user'      => $device->user,
+			    'token'     => $device->token
 			]);
 
 
