@@ -9,6 +9,7 @@
 namespace app\Http\Controllers\Api;
 
 
+use App;
 use App\BindToken;
 use App\Device;
 use Carbon\Carbon;
@@ -20,7 +21,12 @@ use Response;
 use Validator;
 
 class DeviceController extends ApiController {
-	public function getIndex() {
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return \Illuminate\Http\JsonResponse
+	 */
+	public function index() {
 		$device = Device::current();
 		$devices = Device::whereUserId($device->user_id)
 			->where('id', '<>', $device->id)
@@ -29,7 +35,11 @@ class DeviceController extends ApiController {
 		return Response::json($devices);
 	}
 
-	public function getCheck() {
+	/**
+	 * 检查bindToken是否有效、设备是否已经绑定过
+	 * @return \Illuminate\Http\JsonResponse
+	 */
+	public function check() {
 		$token = Input::get('token');
 		$deviceId = Input::get('device_id');
 		if (empty($token)) {
@@ -48,8 +58,13 @@ class DeviceController extends ApiController {
 		}
 		return Response::error(Lang::get("errors.expired_token"), 401);
 	}
-
-	public function postBind() {
+	/**
+	 * Store a newly created resource in storage.
+	 *
+	 * @param  Request $request
+	 * @return Response
+	 */
+	public function store(Request $request) {
 		$token = Input::get('token');
 		$data = Input::all();
 		/**
@@ -84,11 +99,20 @@ class DeviceController extends ApiController {
 		return Response::error(Lang::get("errors.expired_token"), 401);
 	}
 
+
 	/**
 	 * 设备信息更新
+	 * Update the specified resource in storage.
+	 *
+	 * @param  Request $request
+	 * @param  int $id
+	 * @return Response
 	 */
-	public function putIndex() {
+	public function update(Request $request, $id) {
 		$device = Device::current();
+		if ($device->id != $id) {
+			App::abort(403);
+		}
 		$data = Request::only(['alias', 'network_type']);
 
 		$validator = Validator::make($data, Device::update_rules($device->user_id), Device::messages());

@@ -35,6 +35,9 @@ Route::controller('/push', 'PushController');
 
 Route::group(['prefix' => 'api', 'namespace' => 'Api', 'middleware'=>'token'], function () {
 	Config::set('session.driver', 'array');
-	Route::controller('device', 'DeviceController');
+
+	Route::resource('device', 'DeviceController');
+	Route::get('device/check', 'DeviceController@check');
+
 	Route::controller('package', 'PackageController');
 });

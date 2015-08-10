@@ -86,7 +86,7 @@ class Device extends Model {
 	}
 	public static function update_rules($user_id) {
 		return [
-			'alias'         => 'required|min:1|unique:devices,alias,NULL,id,user_id,' . $user_id,
+			'alias'         => 'min:1|unique:devices,alias,NULL,id,user_id,' . $user_id,
 		    'network_type'  =>'in:unknown,mobile,wifi'
 		];
 	}
