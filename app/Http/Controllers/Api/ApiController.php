@@ -9,11 +9,16 @@
 namespace app\Http\Controllers\Api;
 
 
-use Dingo\Api\Http\Response;
-use Dingo\Api\Routing\Helpers;
+use Config;
 use Illuminate\Routing\Controller;
-use Validator;
 
 class ApiController extends Controller {
 
+
+	/**
+	 * ApiController constructor.
+	 */
+	public function __construct() {
+		Config::set('session.driver', 'array');
+	}
 }
