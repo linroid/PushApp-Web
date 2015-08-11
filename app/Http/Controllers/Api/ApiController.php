@@ -11,6 +11,7 @@ namespace app\Http\Controllers\Api;
 
 use Config;
 use Illuminate\Routing\Controller;
+use Session;
 
 class ApiController extends Controller {
 
@@ -19,6 +20,7 @@ class ApiController extends Controller {
 	 * ApiController constructor.
 	 */
 	public function __construct() {
-		Config::set('session.driver', 'array');
+//		Config::set('session.driver', 'array');
+		Session::setDefaultDriver(NULL);
 	}
 }
