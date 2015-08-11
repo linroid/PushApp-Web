@@ -16,6 +16,9 @@ use App\User;
 Route::get('/', 'HomeController@getIndex');
 //Route::controller('/auth', 'AuthController');
 Route::get('/auth/social', 'AuthController@getSocial');
+Route::get('/auth/device', [
+	'as' => 'qrcode', 'uses' => 'AuthController@getDevice'
+]);
 Route::get('/auth/callback', 'AuthController@getCallback');
 Route::get('/auth/logout', 'AuthController@getLogout');
 

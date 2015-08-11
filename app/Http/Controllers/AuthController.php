@@ -39,6 +39,14 @@ class AuthController extends Controller {
 	}
 
 	/**
+	 * 设备
+	 */
+	public function getDevice() {
+		//TODO,检测是否已安装
+		return \Redirect::away(env('APP_DOWNLOAD_URL', 'http://fir.im/pushapp'));
+	}
+
+	/**
 	 * 社交登录回调
 	 */
 	public function getCallback() {

@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-6 col-sm-6 col-xs-12 col-sm-offset-3">
             <br/>
-            <img src="data:image/png;base64, {{ base64_encode(QrCode::margin(1)->format('png')->size(250)->generate(url('/device/bind').'?token='.$token->value)) }} "
+            <img src="data:image/png;base64, {{ base64_encode(QrCode::margin(1)->format('png')->size(250)->generate(route('qrcode').'?token='.$token->value)) }} "
                  height="250px" width="250px">
 
             <p>

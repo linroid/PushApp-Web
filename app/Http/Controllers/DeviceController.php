@@ -30,9 +30,6 @@ class DeviceController extends Controller {
 		return View::make('device.index')->with('devices', $devices);
 	}
 	public function getBind() {
-		if(Input::has('token')) {
-			return \Redirect::away(env('APP_DOWNLOAD_URL', 'http://fir.im/pushapp'));
-		}
 		$token = BindToken::obtain(Auth::user());
 		return View::make('device.bind')
 			->with('token', $token);
