@@ -8,7 +8,7 @@
 
 
 /**
- * 获取服务器端IP地址
+ * 获取服务器端IP地址,支持OSX/Linux
  * @return string
  */
 function get_server_ip() {
@@ -26,7 +26,7 @@ function get_server_ip() {
 
 /**
  * 显示友好的文件大小
- * @param $bytes
+ * @param $bytes 字节大小
  * @param int $decimals
  * @return string
  */

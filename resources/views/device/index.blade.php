@@ -12,8 +12,7 @@
 
                                 <p class="row">
                                     <span class="col-lg-6">型号: {{$device->model}}</span>
-                            <span class="col-lg-6">系统: {{ $device->os_name }} ({{ $device->sdk_level }}
-                                )</span>
+                                    <span class="col-lg-6">系统: {{ $device->os_name }} ({{ $device->sdk_level }})</span>
                                 </p>
 
                                 <p class="row">
@@ -22,14 +21,21 @@
                                     <span class="col-lg-6">DPI: {{$device->dpi}}</span>
 
                                 </p>
+                                <p class="row">
+
+                                    <span class="col-lg-3">内存: {{ friendly_filesize($device->memory_size) }}</span>
+                                    <span class="col-lg-9">CPU: {{$device->cpu_type}}</span>
+                                </p>
 
                                 <p class="row">
-                    <span class="col-lg-6">网络: @if($device->network_type == 'wifi')
-                            <span class="icon text-alt">wifi</span>
-                        @elseif($device->network_type == 'mobile')
-                            <i class="fa fa-mobile text-yellow"></i>
-                        @else 未知
-                        @endif </span>
+                                    <span class="col-lg-6">网络:
+                                        @if($device->network_type == 'wifi')
+                                        <span class="icon text-alt">wifi</span>
+                                        @elseif($device->network_type == 'mobile')
+                                        <i class="fa fa-mobile text-yellow"></i>
+                                        @else 未知
+                                        @endif
+                                    </span>
                                 </p>
                             </div>
                             <div class="card-action">
