@@ -13,7 +13,7 @@
             </p>
 
             <p>
-                如果还没有安装客户端，使用任意App扫描会自动跳到<a href="{{env('APP_DOWNLOAD_URL', 'http://fir.im/pushapp')}}">下载页面</a>
+                如果还没有安装客户端，使用任意App扫描会打开<a href="{{env('APP_DOWNLOAD_URL', 'http://fir.im/pushapp')}}">下载页面</a>
             </p>
         </div>
     </div>
