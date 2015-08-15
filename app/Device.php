@@ -43,7 +43,7 @@ use Input;
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereUpdatedAt($value)
  * @property string $push_id
  * @method static \Illuminate\Database\Query\Builder|\App\Device wherePushId($value)
- * @property string $unique_id 
+ * @property string $unique_id
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereUniqueId($value)
  */
 class Device extends Model {

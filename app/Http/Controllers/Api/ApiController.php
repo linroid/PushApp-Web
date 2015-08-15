@@ -9,12 +9,17 @@
 namespace app\Http\Controllers\Api;
 
 
+use App\Device;
 use Config;
 use Illuminate\Routing\Controller;
 use Session;
 
 class ApiController extends Controller {
 
+	/**
+	 * @var Device $device
+	 */
+	protected $device;
 
 	/**
 	 * ApiController constructor.
@@ -22,5 +27,6 @@ class ApiController extends Controller {
 	public function __construct() {
 //		Config::set('session.driver', 'array');
 		Session::setDefaultDriver(NULL);
+		$this->device = Device::current();
 	}
 }

@@ -42,7 +42,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
  * @method static \Illuminate\Database\Query\Builder|\App\Package whereMd5($value)
  * @property integer $file_size
  * @method static \Illuminate\Database\Query\Builder|\App\Package whereFileSize($value)
- * @property-read mixed $icon_url 
+ * @property-read mixed $icon_url
  */
 class Package extends Model {
 	protected $fillable = ['version_name', 'version_code', 'sdk_level', 'app_name', 'package_name'];

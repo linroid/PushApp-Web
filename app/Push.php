@@ -31,6 +31,7 @@ use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
  * @method static \Illuminate\Database\Query\Builder|\App\Push whereUpdatedAt($value)
  * @property-read \App\User $user
  * @property-read \App\Package $package
+ * @property-read mixed $receiver_count
  */
 class Push extends Model {
 	protected $appends = ['receiver_count'];
@@ -43,7 +44,7 @@ class Push extends Model {
 		return $this->hasOne('App\Package', 'id', 'package_id');
 	}
 
-	public function getReceiverCount() {
+	public function getReceiverCountAttribute() {
 		return PushDevice::wherePushId($this->attributes['id'])->count();
 	}
 

@@ -17,7 +17,7 @@ class DeviceTokenAuthenticate {
 	 * @return mixed
 	 */
 	public function handle($request, Closure $next) {
-		if (!Request::is('api/auth/*')) {
+		if (!Request::is('api/auth/bind') && !Request::is('api/auth/check')) {
 			$token = $request->header('X-Token');
 			if (!Device::attempt($token)) {
 				return Response::error(Lang::get('errors.unauthorized'), 401);

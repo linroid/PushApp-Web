@@ -26,7 +26,7 @@ class ResponseMacroServiceProvider extends ServiceProvider {
 			return Response::error($errors->first(), 400);
 		});
 		Response::macro('noContent', function() {
-			return Response::make();
+			return Response::make('', 204);
 		});
 		Response::macro('exception', function(Exception $e) {
 			if($e instanceof \HttpResponse) {
