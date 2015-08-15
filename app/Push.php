@@ -3,6 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use JPush\JPushClient;
+use JPush\Model as M;
+use Lang;
+use Mockery\CountValidator\Exception;
+use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
 /**
  * App\Push
@@ -27,11 +32,56 @@ use Illuminate\Database\Eloquent\Model;
  * @property-read \App\Package $package
  */
 class Push extends Model {
+	protected $appends = ['receiver_count'];
+
 	public function user() {
 		return $this->hasOne('App\User', 'id', 'user_id');
 	}
 
 	public function package() {
 		return $this->hasOne('App\Package', 'id', 'package_id');
+	}
+
+	public function getReceiverCount() {
+		return PushDevice::wherePushId($this->attributes['id'])->count();
+	}
+
+
+	public static function send ($devices, Package $package, $user_id) {
+		$client = app('JPush\JPushClient');
+		$installIds = $devices->pluck('push_id')->toArray();
+		if (count($installIds) == 0) {
+			throw new \Exception(Lang::get('errors.device_required'), 400);
+		}
+		try {
+			$result = $client->push()
+				->setPlatform(M\all)
+				->setAudience(M\registration_id($installIds))
+				->setMessage(M\message($package->toJson(), null, "package"))
+				->send();
+		} catch (\Exception $e) {
+			throw new Exception(Lang::get('errors.push_failed'), 500);
+		}
+
+		if ($result->isOk) {
+			$push = new Push();
+			$push->package_id = $package->id;
+			$push->user_id = $user_id;
+			$push->sendno = $result->sendno;
+			$push->msg_id = $result->msg_id;
+			$push->is_ok = $result->isOk;
+			$push->save();
+
+			foreach ($devices as $device) {
+				$pd = new PushDevice();
+				$pd->device_id = $device->id;
+				$pd->push_id = $push->id;
+				$pd->status = 1;
+//				$pd->user_id = Auth::id();
+				$pd->save();
+			}
+			return $push;
+		}
+		throw new Exception(Lang::get('errors.push_failed'), 500);
 	}
 }

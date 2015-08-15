@@ -16,8 +16,7 @@ use App\PushDevice;
 use Auth;
 use File;
 use Input;
-use JPush\JPushClient;
-use JPush\Model as M;
+use Lang;
 use Redirect;
 use Response;
 use Session;
@@ -103,53 +102,29 @@ class InstallController extends Controller {
 	 */
 	public function postPush() {
 		$data = Input::all();
-		$package = Package::findOrFailFromArg($data['package']);
+		$package = Package::findOrFailFromArg($data['package'], Auth::id());
 
 		$devices_ids = Input::get('devices');
 		$devices = Device::whereUserId(Auth::id())->whereIn('id', $devices_ids)->get();
-		$installIds = $devices->pluck('push_id')->toArray();
-		if (count($installIds) == 0) {
-			return Redirect::back()->withToast('请选择至少一个设备');
-		}
-		$client = app('JPush\JPushClient');
-		$result = $client->push()
-			->setPlatform(M\all)
-			->setAudience(M\registration_id($installIds))
-			->setMessage(M\message($package->toJson(), null, "package"))
-			->send();
 
-		if ($result->isOk) {
-			$push = new Push();
-			$push->package_id = $package->id;
-			$push->user_id = Auth::id();
-			$push->sendno = $result->sendno;
-			$push->msg_id = $result->msg_id;
-			$push->is_ok = $result->isOk;
-			$push->save();
-
-			foreach ($devices as $device) {
-				$pd = new PushDevice();
-				$pd->device_id = $device->id;
-				$pd->push_id = $push->id;
-				$pd->status = 1;
-//				$pd->user_id = Auth::id();
-				$pd->save();
-			}
+		$result = Push::send($devices, $package, Auth::id());
+		try{
 			if($devices->count()>1) {
-				$msg = "正在向{$devices->count()}台设备推送...";
+				$msg = "已在向{$devices->count()}台设备发出推送...";
 			} else {
-				$msg = "正在向{$devices->first()->alias}推送...";
+				$msg = "已向{$devices->first()->alias}发出推送...";
 			}
 			return redirect('/install')->withToast($msg);
+		} catch(\Exception $e) {
+			return Redirect::back()->withToast($result);
 		}
-		return Redirect::back()->withToast('推送失败,稍后再试试:(');
 	}
 
 	/**
 	 * 选择设备
 	 */
 	public function getTarget() {
-		$package = Package::findOrFailFromArg(Input::get('package'));
+		$package = Package::findOrFailFromArg(Input::get('package'), Auth::id());
 
 		$devices = Device::whereUserId(Auth::id())->get();
 		return View::make('install.target')

@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use Exception;
 use Illuminate\Support\MessageBag;
 use Illuminate\Support\ServiceProvider;
+use Lang;
 use Response;
 
 class ResponseMacroServiceProvider extends ServiceProvider {
@@ -25,6 +27,13 @@ class ResponseMacroServiceProvider extends ServiceProvider {
 		});
 		Response::macro('noContent', function() {
 			return Response::make();
+		});
+		Response::macro('exception', function(Exception $e) {
+			if($e->getCode() < 1000) {
+				return Response::error($e->getMessage(), $e->getCode());
+			}
+			\Log::error($e->getMessage());
+			return Response::error(Lang::get('errors.server_exception'), 500);
 		});
 	}
 

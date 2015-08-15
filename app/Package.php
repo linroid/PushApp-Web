@@ -67,9 +67,9 @@ class Package extends Model {
 	 * 通过参数查找Package
 	 * @param $arg mixed 查询参数,可为文件md5或者package id
 	 */
-	public static function findOrFailFromArg($arg) {
+	public static function findOrFailFromArg($arg, $user_id) {
 		if (is_numeric($arg)) {
-			$package = Package::whereUserId(Auth::id())->findOrFail($arg);
+			$package = Package::whereUserId($user_id)->findOrFail($arg);
 		} else if(is_string($arg)) {
 			$package = Package::whereMd5($arg)->orderBy('created_at', 'desc')->firstOrFail();
 		} else {

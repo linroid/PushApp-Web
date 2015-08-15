@@ -3,11 +3,15 @@
 namespace App\Http\Controllers\Api;
 
 use App\Device;
+use App\Package;
+use App\Push;
+use Auth;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Input;
+use Lang;
 use Response;
 
 class PushController extends Controller
@@ -32,9 +36,16 @@ class PushController extends Controller
     {
 	    $device = Device::current();
 
-        $ids = explode(',', Input::get('devices'));
-	    $devices = Device::whereUserId($device->user_id)->where('id', 'in', $ids)->get();
-		return Response::json($devices);
+	    $package = Package::findOrFailFromArg(Input::get('package'), $device->user_id);
+
+	    $ids = explode(',', Input::get('devices'));
+	    $devices = Device::whereUserId($device->user_id)->whereIn('id', $ids)->get();
+	    try{
+		    $push = Push::send($devices, $package, $device->user_id);
+		    return Response::json($push);
+	    } catch(\Exception $e) {
+		    return Response::exception($e);
+	    }
     }
 
     /**
