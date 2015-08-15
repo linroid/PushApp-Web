@@ -4,7 +4,9 @@ namespace App;
 
 use App;
 use Auth;
+use File;
 use Illuminate\Database\Eloquent\Model;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * App\Package
@@ -75,6 +77,38 @@ class Package extends Model {
 		} else {
 			App::abort(404);
 		}
+		return $package;
+	}
+
+	/**
+	 * 通过上传的文件创建
+	 * @param UploadedFile $inputFile
+	 * @return Package
+	 * @throws \Exception
+	 */
+	public static function createFromInputFile(UploadedFile $inputFile, $user_id) {
+		$storage_root = env('PACKAGE_ROOT');
+		$md5 = md5_file($inputFile->getPathname());
+		$size = $inputFile->getSize();;
+		$target_path = date('Y/m/d', time()) . '/' . $md5;
+		$target_dir = $storage_root . '/' . $target_path;
+		//判断是否重复
+		if (!File::exists($target_path)) {
+			$inputFile->move($target_dir, $inputFile->getClientOriginalName());
+		}
+		$apkFile = $target_dir . '/' . $inputFile->getClientOriginalName();
+		$iconFile = $target_dir . '/icon.png';
+		$result = exec(sprintf('java -jar %s %s %s', app_path('Support/apk.jar'), $apkFile, $iconFile));
+		if ($result == 'error') {
+			throw new \HttpResponseException('解析出错，请检查安装包是否正确', 400);
+		}
+		$package = new Package(json_decode($result, true));
+		$package->path = $target_path . '/' . $inputFile->getClientOriginalName();
+		$package->icon = $target_path . '/icon.png';
+		$package->user_id = $user_id;
+		$package->md5 = $md5;
+		$package->file_size = $size;
+		$package->save();
 		return $package;
 	}
 }

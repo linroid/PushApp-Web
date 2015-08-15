@@ -17,6 +17,7 @@ use Auth;
 use File;
 use Input;
 use Lang;
+use Mockery\CountValidator\Exception;
 use Redirect;
 use Response;
 use Session;
@@ -46,29 +47,12 @@ class InstallController extends Controller {
 	 */
 	public function postUpload() {
 		$inputFile = Input::file('file');
-		$storage_root = env('PACKAGE_ROOT');
-		$md5 = md5_file($inputFile->getPathname());
-		$size = $inputFile->getSize();;
-		$target_path = date('Y/m/d', time()) . '/' . $md5;
-		$target_dir = $storage_root . '/' . $target_path;
-		//判断是否重复
-		if (!File::exists($target_path)) {
-			$inputFile->move($target_dir, $inputFile->getClientOriginalName());
+		try {
+			$package = Package::createFromInputFile($inputFile, Auth::id());
+			return Response::json($package);
+		} catch (Exception $e) {
+			return Response::exception($e);
 		}
-		$apkFile = $target_dir . '/' . $inputFile->getClientOriginalName();
-		$iconFile = $target_dir . '/icon.png';
-		$result = exec(sprintf('java -jar %s %s %s', app_path('Support/apk.jar'), $apkFile, $iconFile));
-		if ($result == 'error') {
-			return Response::error('解析出错，请检查安装包是否正确', 400);
-		}
-		$package = new Package(json_decode($result, true));
-		$package->path = $target_path . '/' . $inputFile->getClientOriginalName();
-		$package->icon = $target_path . '/icon.png';
-		$package->user_id = \Auth::id();
-		$package->md5 = $md5;
-		$package->file_size = $size;
-		$package->save();
-		return Response::json($package);
 
 //		//判断是否重复
 //		if (!File::exists($target_path)) {

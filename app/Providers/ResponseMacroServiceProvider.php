@@ -29,7 +29,7 @@ class ResponseMacroServiceProvider extends ServiceProvider {
 			return Response::make();
 		});
 		Response::macro('exception', function(Exception $e) {
-			if($e->getCode() < 1000) {
+			if($e instanceof \HttpResponse) {
 				return Response::error($e->getMessage(), $e->getCode());
 			}
 			\Log::error($e->getMessage());

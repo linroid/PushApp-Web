@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Exception;
+use Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
@@ -39,7 +40,9 @@ class Handler extends ExceptionHandler {
 		if ($this->isHttpException($e)) {
 			return $this->renderHttpException($e);
 		}
-
+		if($request->acceptsJson()) {
+			return Response::exception($e);
+		}
 
 		if (config('app.debug')) {
 			return $this->renderExceptionWithWhoops($e);

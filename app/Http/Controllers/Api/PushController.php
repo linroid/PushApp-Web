@@ -6,6 +6,7 @@ use App\Device;
 use App\Package;
 use App\Push;
 use Auth;
+use Exception;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -36,7 +37,12 @@ class PushController extends Controller
     {
 	    $device = Device::current();
 
-	    $package = Package::findOrFailFromArg(Input::get('package'), $device->user_id);
+	    if(Input::hasFile('file')) {
+		    $inputFile = Input::file('file');
+		    $package = Package::createFromInputFile($inputFile, $device->user_id);
+	    } else {
+		    $package = Package::findOrFailFromArg(Input::get('package'), $device->user_id);
+	    }
 
 	    $ids = explode(',', Input::get('devices'));
 	    $devices = Device::whereUserId($device->user_id)->whereIn('id', $ids)->get();
