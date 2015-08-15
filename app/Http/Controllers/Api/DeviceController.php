@@ -48,8 +48,8 @@ class DeviceController extends ApiController {
 		if ($device->id != $id) {
 			App::abort(403);
 		}
-		$data = Request::only(['alias', 'network_type']);
-
+		$data = $request::only(['alias', 'network_type']);
+		$data = array_filter($data, 'strlen');
 		$validator = Validator::make($data, Device::update_rules($device->user_id), Device::messages());
 		if ($validator->fails()) {
 			return Response::errors($validator->errors(), 400);
