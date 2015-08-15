@@ -24,7 +24,7 @@ class AuthController extends ApiController {
 	 */
 	public function getCheck() {
 		$token = Input::get('token');
-		$deviceId = Input::get('device_id');
+		$unique_id = Input::get('unique_id');
 		if (empty($token)) {
 			return Response::error(Lang::get('errors.illegal_access'), 400);
 		}
@@ -33,7 +33,7 @@ class AuthController extends ApiController {
 		 */
 		$bindToken = BindToken::whereValue($token)->where('expire_in', '>', new Carbon())->first();
 		if ($bindToken) {
-			$device = Device::whereDeviceId($deviceId)->whereUserId($bindToken->user_id)->first();
+			$device = Device::whereUniqueId($unique_id)->whereUserId($bindToken->user_id)->first();
 			if ($device) {
 				return Response::json($device);
 			}
@@ -54,12 +54,14 @@ class AuthController extends ApiController {
 		 */
 		$bindToken = BindToken::whereValue($token)->where('expire_in', '>', new Carbon())->first();
 		if ($bindToken) {
-			$device = Device::whereDeviceId(Input::get('device_id'))->with('user')->whereUserId($bindToken->user_id)->first();
+			$device = Device::whereUniqueId(Input::get('unique_id'))
+				->with('user')
+				->whereUserId($bindToken->user_id)
+				->first();
 			if ($device) {
 				$device->fill($data);
 				$device->save();
-			}
-			else {
+			} else {
 				$validator = Validator::make($data, Device::create_rules($bindToken->user_id), Device::messages());
 				if ($validator->fails()) {
 					return Response::errors($validator->errors(), 400);

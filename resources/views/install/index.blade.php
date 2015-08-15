@@ -92,7 +92,7 @@
                     acceptedFiles: '.apk'
                 });
                 myDropzone.on("success", function (file, response) {
-                    window.location.href = '{{url('install/target') }}?package_id=' + response.id;
+                    window.location.href = '{{url('install/target') }}?package=' + response.id;
                 });
                 myDropzone.on("addedfile", function (file) {
                     $('#upload').css('border', 'solid 3px #2196f3')

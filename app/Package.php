@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App;
+use Auth;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -38,6 +40,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\Package whereMd5($value)
  * @property integer $file_size
  * @method static \Illuminate\Database\Query\Builder|\App\Package whereFileSize($value)
+ * @property-read mixed $icon_url 
  */
 class Package extends Model {
 	protected $fillable = ['version_name', 'version_code', 'sdk_level', 'app_name', 'package_name'];
@@ -58,5 +61,20 @@ class Package extends Model {
 
 	private function getAssetUrl($attribute) {
 		return url(env('PACKAGE_ROOT')) . '/' . $this->attributes[$attribute];
+	}
+
+	/**
+	 * 通过参数查找Package
+	 * @param $arg mixed 查询参数,可为文件md5或者package id
+	 */
+	public static function findOrFailFromArg($arg) {
+		if (is_numeric($arg)) {
+			$package = Package::whereUserId(Auth::id())->findOrFail($arg);
+		} else if(is_string($arg)) {
+			$package = Package::whereMd5($arg)->orderBy('created_at', 'desc')->firstOrFail();
+		} else {
+			App::abort(404);
+		}
+		return $package;
 	}
 }

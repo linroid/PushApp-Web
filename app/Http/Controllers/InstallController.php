@@ -8,6 +8,7 @@
 
 namespace app\Http\Controllers;
 
+use App;
 use App\Device;
 use App\Package;
 use App\Push;
@@ -102,12 +103,7 @@ class InstallController extends Controller {
 	 */
 	public function postPush() {
 		$data = Input::all();
-		if (Input::has('package_id')) {
-			$package = Package::whereUserId(Auth::id())->findOrFail($data['package_id']);
-		}
-		else {
-			$package = Package::whereMd5($data['package'])->orderBy('created_at', 'desc')->firstOrFail();
-		}
+		$package = Package::findOrFailFromArg($data['package']);
 
 		$devices_ids = Input::get('devices');
 		$devices = Device::whereUserId(Auth::id())->whereIn('id', $devices_ids)->get();
@@ -153,12 +149,8 @@ class InstallController extends Controller {
 	 * 选择设备
 	 */
 	public function getTarget() {
-		if (Input::has('package_id')) {
-			$package = Package::whereUserId(Auth::id())->findOrFail(Input::get('package_id'));
-		}
-		else {
-			$package = Package::whereMd5(Input::get('package'))->orderBy('created_at', 'desc')->firstOrFail();
-		}
+		$package = Package::findOrFailFromArg(Input::get('package'));
+
 		$devices = Device::whereUserId(Auth::id())->get();
 		return View::make('install.target')
 			->with('package', $package)

@@ -7,10 +7,10 @@
             <section class="content-inner">
                 {{--<h2 class="content-sub-heading">列表</h2>--}}
                 <form action="{{ url('install/push') }}" method="post" class="form" id="target-form">
-                    @if(Input::has('package'))
+                    @if($package->user_id==Auth::id())
+                        <input type="hidden" name="package" value="{{ $package->id }}"/>
+                    @else
                         <input type="hidden" name="package" value="{{ $package->md5 }}"/>
-                    @elseif(Input::has(('package_id')))
-                        <input type="hidden" name="package_id" value="{{ $package->id }}"/>
                     @endif
 
                     <input type="hidden" name="_token" value="<?php echo csrf_token() ?>"/>

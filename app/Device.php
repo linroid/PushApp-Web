@@ -18,7 +18,6 @@ use Input;
  * @property string $height
  * @property string $width
  * @property string $dpi
- * @property string $device_id
  * @property string $memory_size
  * @property string $cpu_type
  * @property string $token
@@ -35,7 +34,6 @@ use Input;
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereHeight($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereWidth($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereDpi($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Device whereDeviceId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereMemorySize($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereCpuType($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereToken($value)
@@ -45,12 +43,14 @@ use Input;
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereUpdatedAt($value)
  * @property string $push_id
  * @method static \Illuminate\Database\Query\Builder|\App\Device wherePushId($value)
+ * @property string $unique_id 
+ * @method static \Illuminate\Database\Query\Builder|\App\Device whereUniqueId($value)
  */
 class Device extends Model {
 	private static $device;
 	protected $hidden = ['user', 'token'];
 	protected $fillable = ["model", "alias", "sdk_level", "os_name", "height", 'push_id',
-	                       "width", "dpi", "device_id", "memory_size", "cpu_type", "network_type"];
+	                       "width", "dpi", "unique_id", "memory_size", "cpu_type", "network_type"];
 
 	/**
 	 * 获取客户端的Device
@@ -78,7 +78,7 @@ class Device extends Model {
 
 	public static function create_rules($user_id) {
 		return [
-			'device_id' => 'required',
+			'unique_id' => 'required',
 			'token'     => 'exists:bind_tokens,value',
 			'alias'     => 'required|min:1|unique:devices,alias,NULL,id,user_id,' . $user_id,
 			'push_id'   => 'required|min:1'

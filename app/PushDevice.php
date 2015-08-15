@@ -21,6 +21,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\PushDevice whereUpdatedAt($value)
  * @property integer $user_id
  * @method static \Illuminate\Database\Query\Builder|\App\PushDevice whereUserId($value)
+ * @property-read Device $device
  */
 class PushDevice extends Model {
 	public function device() {
