@@ -23,13 +23,15 @@ class CreateDevicesTable extends Migration
 			$table->string('dpi');
 //			$table->string('imei');
 //			$table->string('mac');
-			$table->string('device_id');
+			$table->string('unique_id');
 			$table->string('memory_size');
 			$table->string('cpu_type');
 			$table->string('token')->unique();
 			$table->enum('network_type', ['wifi', 'mobile', 'unknown'])->default('unknown');
 			$table->unsignedInteger('user_id');
 			$table->timestamps();
+
+			$table->unique(['unique_id', 'user_id']);
 			$table->foreign('user_id')
 				->references('id')
 				->on('users')

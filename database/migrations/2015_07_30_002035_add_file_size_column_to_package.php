@@ -14,7 +14,6 @@ class AddFileSizeColumnToPackage extends Migration
 		Schema::table('packages', function (Blueprint $table) {
 			$table->unsignedInteger('file_size');
 		});
-
 	}
 
 	/**
