@@ -8,13 +8,15 @@ use App\User;
 use Auth;
 use Input;
 use Redirect;
-use Session;
 use Socialite;
 use Validator;
+use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Contracts\Auth\Registrar;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller {
+	protected $redirectTo = '/';
 	/*
 	|--------------------------------------------------------------------------
 	| Registration & Login Controller
@@ -84,9 +86,12 @@ class AuthController extends Controller {
 
 	/**
 	 * Create a new authentication controller instance.
-	 *
+	 * @param Guard $auth
+	 * @param Registrar $registrar
 	 */
-	public function __construct() {
+	public function __construct(Guard $auth, Registrar $registrar) {
+		$this->auth = $auth;
+		$this->registrar = $registrar;
 		$this->middleware('guest', ['except' => 'getLogout']);
 	}
 
@@ -112,9 +117,10 @@ class AuthController extends Controller {
 	 */
 	protected function create(array $data) {
 		return User::create([
-			'name' => $data['name'],
+			'nickname' => $data['name'],
 			'email' => $data['email'],
 			'password' => bcrypt($data['password']),
+		    'avatar' => url('images/android.png')
 		]);
 	}
 }

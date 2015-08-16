@@ -1,11 +1,13 @@
-@extends('app')
-
+@extends('app', ['subtitle'=>"忘记密码"])
+@section('style')
+    <link href="{{ asset('http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css') }}" rel="stylesheet">
+@endsection
 @section('content')
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
-				<div class="panel-heading">Reset Password</div>
+				<div class="panel-heading">忘记密码</div>
 				<div class="panel-body">
 					@if (session('status'))
 						<div class="alert alert-success">
@@ -37,7 +39,7 @@
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
 								<button type="submit" class="btn btn-primary">
-									Send Password Reset Link
+									发送邮件重置邮件
 								</button>
 							</div>
 						</div>

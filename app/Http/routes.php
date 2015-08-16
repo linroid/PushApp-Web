@@ -21,6 +21,12 @@ Route::get('/auth/device', [
 ]);
 Route::get('/auth/callback', 'AuthController@getCallback');
 Route::get('/auth/logout', 'AuthController@getLogout');
+// Authentication routes...
+Route::get('auth/login', 'AuthController@getLogin');
+Route::post('auth/login', 'AuthController@postLogin');
+// Registration routes...
+Route::get('auth/register', 'AuthController@getRegister');
+Route::post('auth/register', 'AuthController@postRegister');
 
 //for debug only
 if (config('app.debug')) {

@@ -1,5 +1,7 @@
-@extends('app')
-
+@extends('app', ['subtitle'=>"密码重置"])
+@section('style')
+    <link href="{{ asset('http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css') }}" rel="stylesheet">
+@endsection
 @section('content')
 <div class="container-fluid">
 	<div class="row">

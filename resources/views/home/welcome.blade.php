@@ -6,14 +6,25 @@
             <div class="card">
                 <div class="card-main">
                     <div class="card-inner">
-                        <p class="card-heading text-blue">登录</p>
-
+                        <p class="card-heading text-blue">社交授权</p>
                         <p>
                             <a href="{{ url('auth/social').'?platform=github' }}"><span class="icon icon-5x"><i
                                             class="fa fa-github"></i></span></a>
                             or &nbsp;
                             <a href="{{ url('auth/social').'?platform=weibo'}}"><span class="icon icon-5x text-red"><i
                                             class="fa fa-weibo"></i></span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-main">
+                    <div class="card-inner">
+                        <p class="card-heading text-blue">账号授权</p>
+                        <p>
+                            <a href="{{ url('auth/login')}}">登录</a>
+                            &nbsp; ／ &nbsp;
+                            <a href="{{ url('auth/register')}}">注册</a>
                         </p>
                     </div>
                 </div>

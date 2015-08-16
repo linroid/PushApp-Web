@@ -10,7 +10,7 @@
     <link href="{{ asset('css/base.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('style')
-            <!-- ie -->
+    <!-- ie -->
     <!--[if lt IE 9]>
     <script src="{{ asset('js/html5shiv.min.js')}}"></script>
     <script src="{{ asset('js/respond.min.js') }}"></script>

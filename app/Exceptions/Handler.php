@@ -40,9 +40,9 @@ class Handler extends ExceptionHandler {
 		if ($this->isHttpException($e)) {
 			return $this->renderHttpException($e);
 		}
-		if($request->acceptsJson()) {
-			return Response::exception($e);
-		}
+//		if($request->isJson()) {
+//			return Response::exception($e);
+//		}
 
 		if (config('app.debug')) {
 			return $this->renderExceptionWithWhoops($e);
