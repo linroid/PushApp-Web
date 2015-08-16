@@ -21,7 +21,7 @@
                         <a href="{{ url('/profile') }}"><span class="icon icon-lg">account_box</span>账号设置</a>
                     </li>
                     <li>
-                        <a href="{{ url('/download') }}"><span class="icon icon-lg">account_box</span>下载App</a>
+                        <a href="{{env('APP_DOWNLOAD_URL', 'http://fir.im/pushapp')}}"><span class="icon icon-lg">account_box</span>下载App</a>
                     </li>
                     <li>
                         <a href="{{ url('/auth/logout') }}"><span class="icon icon-lg">exit_to_app</span>退出</a>
