@@ -50,7 +50,7 @@
                                         <ul class="dropdown-menu">
                                             <li>
                                                 <a class="waves-attach waves-effect"
-                                                   href="{{ $package->user_id == Auth::id() ? url('install/target').'?package_id='.$package->id : url('install/target').'?package='.$package->md5 }}">
+                                                   href="{{ $package->user_id == Auth::id() ? url('install/target').'?package='.$package->id : url('install/target').'?package='.$package->md5 }}">
                                                     <span class="icon icon-lg">replay all</span>&nbsp;再次安装
                                                 </a>
                                             </li>
