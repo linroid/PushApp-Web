@@ -17,6 +17,7 @@ class PushController extends Controller {
 	 */
 	public function __construct() {
 		View::share('active', 'push');
+		$this->middleware('auth');
 	}
 
 	/**
