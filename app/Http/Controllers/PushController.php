@@ -26,6 +26,7 @@ class PushController extends Controller {
 	 */
 	public function getIndex() {
 		$pushes = Push::whereUserId(Auth::id())
+			->with('package')
 			->orderBy('created_at', 'desc')
 			->groupBy('package_id')
 			->paginate(15);
