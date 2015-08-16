@@ -100,7 +100,7 @@ class AuthController extends ApiController {
 	 * @return Response
 	 */
 	public function store(Request $request) {
-		$token = $request->get('token');
+		$token = Input::get('token');
 		/**
 		 * @var BindToken $bindToken
 		 */
@@ -115,12 +115,14 @@ class AuthController extends ApiController {
 			return Response::error(Lang::get('errors.auth_self'), 400);
 		}
 		$auth = DUAuth::whereDeviceId($this->device->id)->whereUserId($bindToken->user_id)->first();
-		if(!$auth) {
-			$auth = new DUAuth();
-			$auth->user_id = $bindToken->user_id;
-			$auth->device_id = $this->device->id;
+		if($auth) {
+			return Response::error(Lang::get('errors.authed', ['nickname'=>$auth->user->nickname]));
 		}
+		$auth = new DUAuth();
+		$auth->user_id = $bindToken->user_id;
+		$auth->device_id = $this->device->id;
 		$auth->save();
+		$auth->user;
 		return Response::json($auth);
 	}
 	/**
