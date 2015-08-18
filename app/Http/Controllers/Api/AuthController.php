@@ -89,7 +89,7 @@ class AuthController extends ApiController {
 	 */
 	public function index()
 	{
-		$auths = DUAuth::whereDeviceId($this->device->id)->with('user')->paginate(30);
+		$auths = DUAuth::whereDeviceId($this->device->id)->orderBy('created_at', 'desc')->with('user')->paginate(30);
 		return Response::json($auths);
 	}
 
