@@ -11,6 +11,7 @@ namespace app\Http\Controllers;
 
 use App\BindToken;
 use App\Device;
+use App\DUAuth;
 use Auth;
 use Input;
 use View;
@@ -26,7 +27,11 @@ class DeviceController extends Controller {
 	}
 
 	public function getIndex() {
-		$devices = Device::whereUserId(Auth::id())->paginate(15);
+		$devices = Device::whereUserId(Auth::id())
+				->orWhere(function($query) {
+					$authed_device_ids = DUAuth::whereUserId(Auth::id())->lists('device_id');
+					$query->whereIn('id', $authed_device_ids);
+				})->paginate(15);
 		return View::make('device.index')->with('devices', $devices);
 	}
 	public function getBind() {

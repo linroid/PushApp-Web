@@ -12,6 +12,7 @@ namespace app\Http\Controllers\Api;
 use App;
 use App\BindToken;
 use App\Device;
+use App\DUAuth;
 use Carbon\Carbon;
 use DB;
 use Input;
@@ -28,9 +29,15 @@ class DeviceController extends ApiController {
 	 */
 	public function index() {
 		$device = Device::current();
-		$devices = Device::whereUserId($device->user_id)
-			->where('id', '<>', $device->id)
-			->paginate(15);
+		$devices = Device::where(function($query) use($device) {
+							$query->whereUserId($device->user_id)
+								->where('id', '<>', $device->id);
+						})
+						->orWhere(function($query) use($device) {
+							$authed_device_ids = DUAuth::whereUserId($device->user_id)->lists('device_id');
+							$query->whereIn('id', $authed_device_ids);
+						})
+						->paginate(15);
 
 		return Response::json($devices);
 	}
