@@ -45,6 +45,9 @@ class PushController extends Controller
 	    }
 
 	    $ids = explode(',', Input::get('devices'));
+	    if (count($ids) == 1 && !is_numeric($ids[0])) {
+
+	    }
 	    $devices = Device::whereUserId($device->user_id)->whereIn('id', $ids)->get();
 	    try{
 		    $push = Push::send($devices, $package, $device->user_id);

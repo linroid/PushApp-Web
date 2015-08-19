@@ -64,7 +64,6 @@ class AuthController extends ApiController {
 			->first();
 		if ($device) {
 			$device->fill($data);
-			$device->save();
 		} else {
 			$validator = Validator::make($data, Device::create_rules($bindToken->user_id), Device::messages());
 			if ($validator->fails()) {
@@ -73,13 +72,16 @@ class AuthController extends ApiController {
 			$device = new Device($data);
 			$device->token = str_random(64);
 			$device->user_id = $bindToken->user_id;
-			$device->save();
 		}
+		$device->install_token = str_random(64);
+		$device->save();
+
 
 		return Response::json([
 			'device'    => $device,
 			'user'      => $device->user,
-			'token'     => $device->token
+			'token'     => $device->token,
+		    'install_token'=> $device->install_token
 		]);
 	}
 	/**
