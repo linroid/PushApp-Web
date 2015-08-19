@@ -16,9 +16,10 @@ use App\User;
 Route::get('/', 'HomeController@getIndex');
 //Route::controller('/auth', 'AuthController');
 Route::get('/auth/social', 'AuthController@getSocial');
-Route::get('/auth/device', [
-	'as' => 'qrcode', 'uses' => 'AuthController@getDevice'
-]);
+
+Route::get('qrcode/{key}/{value}', function() {
+	return \Redirect::away(env('APP_DOWNLOAD_URL', 'http://fir.im/pushapp'));
+});
 Route::get('/auth/callback', 'AuthController@getCallback');
 Route::get('/auth/logout', 'AuthController@getLogout');
 // Authentication routes...
