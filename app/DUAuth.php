@@ -18,8 +18,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\DUAuth whereUserId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\DUAuth whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\DUAuth whereUpdatedAt($value)
- * @property-read \App\User $user 
- * @property-read \App\Device $device 
+ * @property-read \App\User $user
+ * @property-read \App\Device $device
  */
 class DUAuth extends Model {
 	protected $table = 'auth';

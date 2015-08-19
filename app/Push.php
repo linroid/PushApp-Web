@@ -51,7 +51,7 @@ class Push extends Model {
 
 	public static function send ($devices, Package $package, $user_id) {
 		$client = app('JPush\JPushClient');
-		$installIds = $devices->pluck('push_id')->toArray();
+		$installIds = $devices->pluck('install_id')->toArray();
 		if (count($installIds) == 0) {
 			throw new \HttpResponseException(Lang::get('errors.device_required'), 400);
 		}

@@ -41,15 +41,15 @@ use Input;
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereUserId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereUpdatedAt($value)
- * @property string $push_id
- * @method static \Illuminate\Database\Query\Builder|\App\Device wherePushId($value)
  * @property string $unique_id
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereUniqueId($value)
+ * @property string $install_id 
+ * @method static \Illuminate\Database\Query\Builder|\App\Device whereInstallId($value)
  */
 class Device extends Model {
 	private static $device;
 	protected $hidden = ['user', 'token'];
-	protected $fillable = ["model", "alias", "sdk_level", "os_name", "height", 'push_id',
+	protected $fillable = ["model", "alias", "sdk_level", "os_name", "height", 'install_id',
 	                       "width", "dpi", "unique_id", "memory_size", "cpu_type", "network_type"];
 
 	/**
@@ -81,7 +81,7 @@ class Device extends Model {
 			'unique_id' => 'required',
 			'token'     => 'exists:bind_tokens,value',
 			'alias'     => 'required|min:1|unique:devices,alias,NULL,id,user_id,' . $user_id,
-			'push_id'   => 'required|min:1'
+			'install_id'   => 'required|min:1'
 		];
 	}
 	public static function update_rules($user_id) {
