@@ -11,17 +11,13 @@ class CreateBindTokensTable extends Migration {
 	 * @return void
 	 */
 	public function up() {
-		Schema::create('bind_tokens', function (Blueprint $table) {
+		Schema::create('tokens', function (Blueprint $table) {
 			$table->increments('id');
+			$table->string('type');
 			$table->string('value')->unique();
+			$table->unsignedInteger('owner');
 			$table->timestamp('expire_in');
-			$table->unsignedInteger('user_id');
 			$table->timestamps();
-			$table->foreign('user_id')
-				->references('id')
-				->on('users')
-				->onUpdate('cascade')
-				->onDelete('cascade');
 		});
 	}
 
@@ -31,6 +27,6 @@ class CreateBindTokensTable extends Migration {
 	 * @return void
 	 */
 	public function down() {
-		Schema::drop('bind_tokens');
+		Schema::drop('tokens');
 	}
 }

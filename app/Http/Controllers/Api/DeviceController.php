@@ -13,6 +13,7 @@ use App;
 use App\BindToken;
 use App\Device;
 use App\DUAuth;
+use App\Token;
 use Carbon\Carbon;
 use DB;
 use Input;
@@ -64,5 +65,12 @@ class DeviceController extends ApiController {
 		$device->fill($data);
 		$device->save();
 		return Response::json($device);
+	}
+
+	/**
+	 * 获得设备二维码，用于其他设备向这台设备安装
+	 */
+	public function token() {
+		return Response::json(Token::obtainDevice());
 	}
 }

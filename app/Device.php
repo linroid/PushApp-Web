@@ -45,7 +45,7 @@ use Input;
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereUniqueId($value)
  * @property string $install_id
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereInstallId($value)
- * @property integer $install_token 
+ * @property integer $install_token
  * @method static \Illuminate\Database\Query\Builder|\App\Device whereInstallToken($value)
  */
 class Device extends Model {

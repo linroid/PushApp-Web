@@ -9,7 +9,7 @@
 namespace app\Http\Controllers\Api;
 
 
-use App\BindToken;
+use App\Token;
 use App\Device;
 use App\DUAuth;
 use Carbon\Carbon;
@@ -21,7 +21,7 @@ use Validator;
 
 class AuthController extends ApiController {
 	/**
-	 * 检查bindToken是否有效、设备是否已经绑定过
+	 * 检查Token是否有效、设备是否已经绑定过
 	 * @return \Illuminate\Http\JsonResponse
 	 */
 	public function check() {
@@ -31,11 +31,11 @@ class AuthController extends ApiController {
 			return Response::error(Lang::get('errors.illegal_access'), 400);
 		}
 		/**
-		 * @var BindToken $bindToken
+		 * @var Token $token
 		 */
-		$bindToken = BindToken::whereValue($token)->where('expire_in', '>', new Carbon())->first();
-		if ($bindToken) {
-			$device = Device::whereUniqueId($unique_id)->whereUserId($bindToken->user_id)->first();
+		$token = Token::whereValue($token)->valid()->first();
+		if ($token) {
+			$device = Device::whereUniqueId($unique_id)->whereUserId($token->owner)->first();
 			if ($device) {
 				return Response::json($device);
 			}
@@ -52,36 +52,34 @@ class AuthController extends ApiController {
 		$token = Input::get('token');
 		$data = Input::all();
 		/**
-		 * @var BindToken $bindToken
+		 * @var Token $token
 		 */
-		$bindToken = BindToken::whereValue($token)->where('expire_in', '>', new Carbon())->first();
-		if (!$bindToken) {
+		$token = Token::whereValue($token)->valid()->first();
+		if (!$token) {
 			return Response::error(Lang::get("errors.expired_token"), 401);
 		}
 		$device = Device::whereUniqueId(Input::get('unique_id'))
 			->with('user')
-			->whereUserId($bindToken->user_id)
+			->whereUserId($token->owner)
 			->first();
 		if ($device) {
 			$device->fill($data);
 		} else {
-			$validator = Validator::make($data, Device::create_rules($bindToken->user_id), Device::messages());
+			$validator = Validator::make($data, Device::create_rules($token->owner), Device::messages());
 			if ($validator->fails()) {
 				return Response::errors($validator->errors(), 400);
 			}
 			$device = new Device($data);
-			$device->token = str_random(64);
-			$device->user_id = $bindToken->user_id;
+			$device->token = Token::generateValue();
+			$device->user_id = $token->owner;
 		}
-		$device->install_token = str_random(64);
 		$device->save();
 
 
 		return Response::json([
 			'device'    => $device,
 			'user'      => $device->user,
-			'token'     => $device->token,
-		    'install_token'=> $device->install_token
+			'token'     => $device->token
 		]);
 	}
 	/**
@@ -104,24 +102,24 @@ class AuthController extends ApiController {
 	public function store(Request $request) {
 		$token = Input::get('token');
 		/**
-		 * @var BindToken $bindToken
+		 * @var Token $token
 		 */
-		$bindToken = BindToken::whereValue($token)
+		$token = Token::whereValue($token)
 			->where('expire_in', '>', new Carbon())
 			->first();
 
-		if (!$bindToken) {
+		if (!$token) {
 			return Response::error(Lang::get("errors.expired_token"), 401);
 		}
-		if ($bindToken->user_id == $this->device->user_id) {
+		if ($token->owner == $this->device->user_id) {
 			return Response::error(Lang::get('errors.auth_self'), 400);
 		}
-		$auth = DUAuth::whereDeviceId($this->device->id)->whereUserId($bindToken->user_id)->first();
+		$auth = DUAuth::whereDeviceId($this->device->id)->whereUserId($token->owner)->first();
 		if($auth) {
 			return Response::error(Lang::get('errors.authed', ['nickname'=>$auth->user->nickname]));
 		}
 		$auth = new DUAuth();
-		$auth->user_id = $bindToken->user_id;
+		$auth->user_id = $token->owner;
 		$auth->device_id = $this->device->id;
 		$auth->save();
 		$auth->user;
