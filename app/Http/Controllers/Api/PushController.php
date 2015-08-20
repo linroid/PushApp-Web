@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Device;
 use App\Package;
 use App\Push;
+use App\Token;
 use Auth;
 use Exception;
 use Illuminate\Http\Request;
@@ -46,9 +47,14 @@ class PushController extends Controller
 
 	    $ids = explode(',', Input::get('devices'));
 	    if (count($ids) == 1 && !is_numeric($ids[0])) {
-
+			$token = Token::whereValue($ids[0])->valid()->first();
+		    if ($token) {
+			    $devices = Device::whereId($token->owner)->get();
+		    }
 	    }
-	    $devices = Device::whereUserId($device->user_id)->whereIn('id', $ids)->get();
+	    if (empty($devices)) {
+		    $devices = Device::whereUserId($device->user_id)->whereIn('id', $ids)->get();
+	    }
 	    try{
 		    $push = Push::send($devices, $package, $device->user_id);
 		    return Response::json($push);

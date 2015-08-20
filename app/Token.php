@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * App\Token
  *
  * @property integer $id
- * @property string $expire_in
+ * @property Carbon $expire_in
  * @property integer $owner
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
@@ -36,10 +36,13 @@ class Token extends Model
 	public static $type_device = "device";
 
 	protected $date = ['expire_in'];
-
+	protected $casts = [
+		'expire_in' => 'string',
+	    'owner'     => 'int'
+	];
 	public function scopeValid($query)
 	{
-		return $query->where('expire_id', '>', new Carbon());
+		return $query->where('expire_in', '>', new Carbon());
 	}
 
 	/**

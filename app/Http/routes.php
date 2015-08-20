@@ -47,6 +47,7 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api', 'middleware'=>'token'], f
 	Route::get('auth/check', 'AuthController@check');
 	Route::post('auth/bind', 'AuthController@bind');
 	Route::resource('auth', 'AuthController');
+	Route::get('device/token', 'DeviceController@token');
 	Route::resource('device', 'DeviceController');
 	Route::controller('package', 'PackageController');
 	Route::resource('push', 'PushController');
