@@ -14,5 +14,6 @@ return array(
 	'server_exception' => '服务器异常，稍后再试试:(',
 	'auth_self' => '不能再给自己授权啦',
 	'authed' => '你已经为:nickname授权过,不用再授权啦!',
-	'forbidden' => '您没有权限这么做'
+	'forbidden' => '您没有权限这么做',
+	'expired_device_qrcode' => '二维码已过期',
 );

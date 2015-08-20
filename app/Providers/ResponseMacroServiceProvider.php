@@ -29,7 +29,8 @@ class ResponseMacroServiceProvider extends ServiceProvider {
 			return Response::make('', 204);
 		});
 		Response::macro('exception', function(Exception $e) {
-			if($e instanceof \HttpResponse) {
+//			if($e instanceof \HttpResponse) {
+			if (config('app.debug')) {
 				return Response::error($e->getMessage(), $e->getCode());
 			}
 			\Log::error($e->getMessage());

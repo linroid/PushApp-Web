@@ -2,13 +2,9 @@
 
 namespace App;
 
-use HttpResponseException;
 use Illuminate\Database\Eloquent\Model;
-use JPush\JPushClient;
 use JPush\Model as M;
 use Lang;
-use Mockery\CountValidator\Exception;
-use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
 /**
  * App\Push
@@ -53,7 +49,7 @@ class Push extends Model {
 		$client = app('JPush\JPushClient');
 		$installIds = $devices->pluck('install_id')->toArray();
 		if (count($installIds) == 0) {
-			throw new \HttpResponseException(Lang::get('errors.device_required'), 400);
+			throw new \Exception(Lang::get('errors.device_required'), 400);
 		}
 		try {
 			$result = $client->push()
@@ -62,7 +58,7 @@ class Push extends Model {
 				->setMessage(M\message($package->toJson(), null, "package"))
 				->send();
 		} catch (\Exception $e) {
-			throw new HttpResponseException(Lang::get('errors.push_failed'), 500);
+			throw new \Exception(Lang::get('errors.push_failed'), 500);
 		}
 
 		if ($result->isOk) {
@@ -84,6 +80,6 @@ class Push extends Model {
 			}
 			return $push;
 		}
-		throw new HttpResponseException(Lang::get('errors.push_failed'), 500);
+		throw new \Exception(Lang::get('errors.push_failed'), 500);
 	}
 }
