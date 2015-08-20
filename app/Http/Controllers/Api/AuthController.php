@@ -104,9 +104,7 @@ class AuthController extends ApiController {
 		/**
 		 * @var Token $token
 		 */
-		$token = Token::whereValue($token)
-			->where('expire_in', '>', new Carbon())
-			->first();
+		$token = Token::whereValue($token)->valid()->first();
 
 		if (!$token) {
 			return Response::error(Lang::get("errors.expired_token"), 401);
@@ -116,7 +114,7 @@ class AuthController extends ApiController {
 		}
 		$auth = DUAuth::whereDeviceId($this->device->id)->whereUserId($token->owner)->first();
 		if($auth) {
-			return Response::error(Lang::get('errors.authed', ['nickname'=>$auth->user->nickname]));
+			return Response::error(Lang::get('errors.authorized', ['nickname'=>$auth->user->nickname]));
 		}
 		$auth = new DUAuth();
 		$auth->user_id = $token->owner;
@@ -160,8 +158,8 @@ class AuthController extends ApiController {
 		/**
 		 * @var DUAuth $auth
 		 */
-		$auth = DUAuth::findOrFail($id);
-		if($this->device->user_id != $auth->user_id) {
+		$auth = DUAuth::whereDeviceId($this->device->id)->findOrFail($id);
+		if(!$auth) {
 			return Response::error(Lang::get('errors.forbidden', 403));
 		}
 		$auth->delete();
