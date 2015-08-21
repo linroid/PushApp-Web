@@ -81,7 +81,7 @@ class Device extends Model {
 	public static function create_rules($user_id) {
 		return [
 			'unique_id' => 'required',
-			'token'     => 'exists:bind_tokens,value',
+			'token'     => 'exists:tokens,value',
 			'alias'     => 'required|min:1|unique:devices,alias,NULL,id,user_id,' . $user_id,
 			'install_id'   => 'required|min:1'
 		];
