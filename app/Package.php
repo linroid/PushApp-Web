@@ -46,7 +46,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
  */
 class Package extends Model {
 	protected $fillable = ['version_name', 'version_code', 'sdk_level', 'app_name', 'package_name'];
-	protected $hidden = ['path', 'md5', 'icon'];
+	protected $hidden = ['path', 'icon'];
 	protected $appends = ['download_url', 'icon_url'];
 
 	public function user() {

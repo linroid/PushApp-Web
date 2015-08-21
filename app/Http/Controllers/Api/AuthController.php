@@ -41,7 +41,7 @@ class AuthController extends ApiController {
 			}
 			return Response::noContent();
 		}
-		return Response::error(Lang::get("errors.expired_token"), 401);
+		return Response::error(Lang::get("errors.expired_token"), 403);
 	}
 
 	/**
@@ -56,7 +56,7 @@ class AuthController extends ApiController {
 		 */
 		$token = Token::whereValue($token)->valid()->first();
 		if (!$token) {
-			return Response::error(Lang::get("errors.expired_token"), 401);
+			return Response::error(Lang::get("errors.expired_token"), 403);
 		}
 		$device = Device::whereUniqueId(Input::get('unique_id'))
 			->with('user')
