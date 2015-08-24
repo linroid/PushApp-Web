@@ -16,4 +16,5 @@ return array(
 	'authorized' => '你已经为:nickname授权过,不用再授权啦!',
 	'forbidden' => '您没有权限这么做',
 	'expired_device_qrcode' => '二维码已过期',
+	'invalid_url'   => '请输入正确的URL'
 );

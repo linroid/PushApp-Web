@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-lg-5 col-sm-5 col-xs-12 pull-right">
-            <form class="form" style="margin-top: 50px;">
+            <form class="form" action="{{ url('/install') }}" method="post" style="margin-top: 50px;">
                 <fieldset>
                     <legend>通过URL</legend>
                     <div class="form-group form-group-label">
@@ -52,8 +52,8 @@
                     <p class="text-center"><img class="avatar-inline avatar-lg"
                                                 src="{{ asset('images/android.png') }}"/></p>
 
-                    <div class="dz-filename text-center"><span data-dz-name></span></div>
-                    <div class="dz-size text-center" data-dz-size></div>
+                    <div class="dz-filename text-center text-black"><span data-dz-name></span></div>
+                    <div class="dz-size text-center text-black" data-dz-size></div>
                 </div>
 
                 <div class="dz-success-mark pull-right">

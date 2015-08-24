@@ -10,6 +10,7 @@ namespace app\Http\Controllers;
 
 use App;
 use App\Device;
+use App\DUAuth;
 use App\Package;
 use App\Push;
 use App\PushDevice;
@@ -39,6 +40,16 @@ class InstallController extends Controller {
 
 	public function getIndex() {
 		return View::make('install.index');
+	}
+
+	public function postIndex() {
+		if (Input::has('url')) {
+			$url = Input::get('url');
+			if (filter_var($url, FILTER_VALIDATE_URL) === FALSE) {
+				return Redirect::back()->withToast(trans('errors.invalid_url'));
+			}
+			return Redirect::to('/install/target')->withInput(Input::all());
+		}
 	}
 
 	/**
@@ -86,10 +97,21 @@ class InstallController extends Controller {
 	 */
 	public function postPush() {
 		$data = Input::all();
-		$package = Package::findOrFailFromArg($data['package'], Auth::id());
 
 		$devices_ids = Input::get('devices');
-		$devices = Device::whereUserId(Auth::id())->whereIn('id', $devices_ids)->get();
+
+		$devices = Device::whereUserId(Auth::id())
+							->orWhere(function($query) {
+								$device_ids = DUAuth::whereUserId(Auth::id())->lists('device_id');
+								$query->whereIn('id', $device_ids);
+							})
+							->whereIn('id', $devices_ids)
+							->get();
+		if(!Input::has('package') && Input::has('url')) {
+			$this->dispatch(new App\Jobs\PushApk(Auth::user(), $data['url'], $devices));
+			return redirect('/install')->withToast('服务器正在努力处理中，请稍等...');
+		}
+		$package = Package::findOrFailFromArg($data['package'], Auth::id());
 
 		$result = Push::send($devices, $package, Auth::id());
 		try{
@@ -108,11 +130,23 @@ class InstallController extends Controller {
 	 * 选择设备
 	 */
 	public function getTarget() {
-		$package = Package::findOrFailFromArg(Input::get('package'), Auth::id());
+		$devices = Device::whereUserId(Auth::id())
+					->orWhere(function($query) {
+						$authed_device_ids = DUAuth::whereUserId(Auth::id())->lists('device_id');
+						$query->whereIn('id', $authed_device_ids);
+					})->get();
+		$response = View::make('install.target')
+					->with('devices', $devices);
+		if(Input::has('package')) {
+			$package = Package::findOrFailFromArg(Input::get('package'), Auth::id());
+			return $response->with('package', $package);
+		} else {
+			$url = Input::old('url');
+			if (empty($url)) {
+				return redirect('install')->withToast('发生异常');
+			}
 
-		$devices = Device::whereUserId(Auth::id())->get();
-		return View::make('install.target')
-			->with('package', $package)
-			->with('devices', $devices);
+			return  $response->with('url', $url);
+		}
 	}
 }

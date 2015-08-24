@@ -7,10 +7,14 @@
             <section class="content-inner">
                 {{--<h2 class="content-sub-heading">列表</h2>--}}
                 <form action="{{ url('install/push') }}" method="post" class="form" id="target-form">
-                    @if($package->user_id==Auth::id())
-                        <input type="hidden" name="package" value="{{ $package->id }}"/>
-                    @else
-                        <input type="hidden" name="package" value="{{ $package->md5 }}"/>
+                    @if (isset($package))
+                        @if($package->user_id==Auth::id())
+                            <input type="hidden" name="package" value="{{ $package->id }}"/>
+                        @else
+                            <input type="hidden" name="package" value="{{ $package->md5 }}"/>
+                        @endif
+                    @elseif (isset($url))
+                        <input type="hidden" name="url" value="{{ $url }}"/>
                     @endif
 
                     <input type="hidden" name="_token" value="<?php echo csrf_token() ?>"/>
@@ -65,6 +69,7 @@
             </section>
         </div>
     </div>
+    @if (isset($package))
     <div class="form-group form-group-label form-group-blue">
         <div class="row">
             <div class="col-lg-6 col-sm-8  col-sm-offset-3">
@@ -74,6 +79,7 @@
             </div>
         </div>
     </div>
+    @endif
 @endsection
 
 @section('script')

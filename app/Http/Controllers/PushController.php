@@ -26,10 +26,18 @@ class PushController extends Controller {
 	 * @return Response
 	 */
 	public function getIndex() {
-		$pushes = Push::whereUserId(Auth::id())
+//		Package::join('pushes', 'packages.id', '=', 'pushes.package_id')
+//			->join('push_devices', 'pushes.id', '=', 'push_devices.push_id')
+//			->where('push_devices.device_id', '=', $device->id)
+//			->orderBy('pushes.created_at', 'desc')
+//			->groupBy('packages.id')
+//			->select('packages.*', 'pushes.id as push_id')
+		$pushes = Push::join('push_devices', 'pushes.id', '=', 'push_devices.push_id')
+			->join('devices', 'devices.id', '=', 'push_devices.device_id')
+			->where('devices.user_id', '=', Auth::id())
 			->with('package')
 			->orderBy('created_at', 'desc')
-			->groupBy('package_id')
+			->select('pushes.*')
 			->paginate(15);
 		return view('push.index')
 			->with('pushes', $pushes);

@@ -4,6 +4,7 @@ namespace App;
 
 use App;
 use Auth;
+use Exception;
 use File;
 use Illuminate\Database\Eloquent\Model;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -87,23 +88,68 @@ class Package extends Model {
 	 * @throws \Exception
 	 */
 	public static function createFromInputFile(UploadedFile $inputFile, $user_id) {
+//		$storage_root = env('PACKAGE_ROOT');
+//		$md5 = md5_file($inputFile->getPathname());
+//		$size = $inputFile->getSize();;
+//		$target_path = date('Y/m/d', time()) . '/' . $md5;
+//		$target_dir = $storage_root . '/' . $target_path;
+//		//判断是否重复
+//		if (!File::exists($target_path)) {
+//			$inputFile->move($target_dir, $inputFile->getClientOriginalName());
+//		}
+//		$apkFile = $target_dir . '/' . $inputFile->getClientOriginalName();
+//		$iconFile = $target_dir . '/icon.png';
+//		$result = exec(sprintf('java -jar %s %s %s', app_path('Support/apk.jar'), $apkFile, $iconFile));
+//		if ($result == 'error') {
+//			throw new \HttpResponseException('解析出错，请检查安装包是否正确', 400);
+//		}
+//		$package = new Package(json_decode($result, true));
+//		$package->path = $target_path . '/' . $inputFile->getClientOriginalName();
+//		$package->icon = $target_path . '/icon.png';
+//		$package->user_id = $user_id;
+//		$package->md5 = $md5;
+//		$package->file_size = $size;
+//		$package->save();
+//		return $package;
+		return static::createFromFile($inputFile->getPathname(),
+										$inputFile->getClientOriginalName(),
+										$user_id);
+	}
+
+	/**
+	 * 从普通文件创建
+	 * @param $tmpFilePath
+	 * @param $filename
+	 * @param $user_id
+	 * @return Package
+	 * @throws Exception
+	 */
+	public static function createFromFile($tmpFilePath, $filename, $user_id) {
+		if(File::extension($filename) != 'apk') {
+			$filename = str_random(5).'.apk';
+		}
 		$storage_root = env('PACKAGE_ROOT');
-		$md5 = md5_file($inputFile->getPathname());
-		$size = $inputFile->getSize();;
+		$md5 = md5_file($tmpFilePath);
+		$size = filesize($tmpFilePath);
 		$target_path = date('Y/m/d', time()) . '/' . $md5;
-		$target_dir = $storage_root . '/' . $target_path;
+
+		$relative_dir = $storage_root . '/' . $target_path;
+		$apkFile = $relative_dir . '/' . $filename;
+
 		//判断是否重复
-		if (!File::exists($target_path)) {
-			$inputFile->move($target_dir, $inputFile->getClientOriginalName());
+		if (!File::exists($relative_dir)) {
+			File::makeDirectory($relative_dir, 0755, true);
+			File::move($tmpFilePath, $apkFile);
 		}
-		$apkFile = $target_dir . '/' . $inputFile->getClientOriginalName();
-		$iconFile = $target_dir . '/icon.png';
+		$iconFile = $relative_dir . '/icon.png';
 		$result = exec(sprintf('java -jar %s %s %s', app_path('Support/apk.jar'), $apkFile, $iconFile));
-		if ($result == 'error') {
-			throw new \HttpResponseException('解析出错，请检查安装包是否正确', 400);
+
+		$data = json_decode($result, true);
+		if ($result == 'error' || empty($data)) {
+			throw new Exception('解析出错，请检查安装包是否正确', 400);
 		}
-		$package = new Package(json_decode($result, true));
-		$package->path = $target_path . '/' . $inputFile->getClientOriginalName();
+		$package = new Package($data);
+		$package->path = $target_path . '/' . $filename;
 		$package->icon = $target_path . '/icon.png';
 		$package->user_id = $user_id;
 		$package->md5 = $md5;

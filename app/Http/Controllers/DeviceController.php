@@ -9,7 +9,6 @@
 namespace app\Http\Controllers;
 
 
-use App\BindToken;
 use App\Device;
 use App\DUAuth;
 use App\Token;
