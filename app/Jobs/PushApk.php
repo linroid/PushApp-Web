@@ -13,8 +13,10 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Bus\SelfHandling;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use JPush\JPushClient;
 use Log;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use JPush\Model as M;
 
 class PushApk extends Job implements SelfHandling, ShouldQueue {
 	use InteractsWithQueue, SerializesModels;
@@ -36,9 +38,10 @@ class PushApk extends Job implements SelfHandling, ShouldQueue {
 	/**
 	 * Execute the job.
 	 *
-	 * @return void
+	 * @param JPushClient $client
 	 */
-	public function handle() {
+	public function handle(JPushClient $client) {
+		$error = '';
 		try {
 			if ($this->download($this->url)) {
 				$package = Package::createFromFile($this->tmpFile, basename($this->url), $this->user->id);
@@ -51,16 +54,26 @@ class PushApk extends Job implements SelfHandling, ShouldQueue {
 						$msg = "已向{$this->devices->first()->alias}发出推送...";
 					}
 					Log::info($msg);
-				}
-				catch (\Exception $e) {
+
+				} catch (\Exception $e) {
 					Log::error('[PushApk Job]推送失败' . $e->getMessage());
+					return;
 				}
 			} else {
+				$error = trans('errors.download_failed');
 				Log::error('[PushApk Job]下载文件失败: ' . $this->url);
 			}
 		} catch (Exception $e) {
+			$error = $e->getMessage();
 			Log::error('[PushApk]' . $e->getMessage() . '  ' . $this->url);
 		}
+		$installIds = $this->devices->pluck('install_id')->toArray();
+		$result = $client->push()
+			->setPlatform(M\all)
+			->setAudience(M\registration_id($installIds))
+			->setNotification(M\notification('出现错误，请检查URL是否正确'))
+			->send();
+
 	}
 
 	/**

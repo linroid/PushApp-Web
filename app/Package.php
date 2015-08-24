@@ -133,7 +133,7 @@ class Package extends Model {
 		$size = filesize($tmpFilePath);
 		$target_path = date('Y/m/d', time()) . '/' . $md5;
 
-		$relative_dir = $storage_root . '/' . $target_path;
+		$relative_dir = public_path($storage_root . '/' . $target_path);
 		$apkFile = $relative_dir . '/' . $filename;
 
 		//判断是否重复
@@ -146,6 +146,7 @@ class Package extends Model {
 
 		$data = json_decode($result, true);
 		if ($result == 'error' || empty($data)) {
+			File::delete($apkFile);
 			throw new Exception('解析出错，请检查安装包是否正确', 400);
 		}
 		$package = new Package($data);
