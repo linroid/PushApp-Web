@@ -68,11 +68,15 @@ class PushApk extends Job implements SelfHandling, ShouldQueue {
 			Log::error('[PushApk]' . $e->getMessage() . '  ' . $this->url);
 		}
 		$installIds = $this->devices->pluck('install_id')->toArray();
-		$result = $client->push()
-			->setPlatform(M\all)
-			->setAudience(M\registration_id($installIds))
-			->setNotification(M\notification('出现错误，请检查URL是否正确'))
-			->send();
+		try {
+			$result = $client->push()
+				->setPlatform(M\all)
+				->setAudience(M\registration_id($installIds))
+				->setNotification(M\notification('出现错误，请检查URL是否正确'))
+				->send();
+		} catch (Exception $ignored) {
+
+		}
 
 	}
 
