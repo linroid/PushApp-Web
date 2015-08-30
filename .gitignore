@@ -5,3 +5,5 @@ Homestead.yaml
 _ide_helper*
 .idea
 .phpstorm.meta.php
+
+dump.rdb

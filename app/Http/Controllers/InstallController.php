@@ -99,13 +99,12 @@ class InstallController extends Controller {
 		$data = Input::all();
 
 		$devices_ids = Input::get('devices');
-
 		$devices = Device::whereUserId(Auth::id())
-							->orWhere(function($query) {
-								$device_ids = DUAuth::whereUserId(Auth::id())->lists('device_id');
-								$query->whereIn('id', $device_ids);
-							})
-							->whereIn('id', $devices_ids)
+//							->orWhere(function($query) use($devices_ids) {
+//								$ids = DUAuth::whereUserId(Auth::id())->lists('device_id');
+//								$query->whereIn('id', $ids)->whereIn('id', $devices_ids);
+//							})
+							->whereIn('devices.id', $devices_ids)
 							->get();
 		if(!Input::has('package') && Input::has('url')) {
 			$this->dispatch(new App\Jobs\PushApk(Auth::user(), $data['url'], $devices));

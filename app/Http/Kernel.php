@@ -30,5 +30,6 @@ class Kernel extends HttpKernel {
 		'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
 		'device_count' => \App\Http\Middleware\DeviceCountCheck::class,
 		'token' => \App\Http\Middleware\DeviceTokenAuthenticate::class,
+		'admin_only' => \App\Http\Middleware\AdministratorOnly::class,
 	];
 }

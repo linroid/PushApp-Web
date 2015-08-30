@@ -151,6 +151,7 @@ return [
 		Barryvdh\Debugbar\ServiceProvider::class,
 		//        Dingo\Api\Provider\LaravelServiceProvider::class,
 		SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+		Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
 
 		App\Providers\ResponseMacroServiceProvider::class,
 		App\Providers\JPushProvider::class,

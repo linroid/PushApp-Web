@@ -37,6 +37,7 @@ if (config('app.debug')) {
 	});
 	Route::controller('test', 'TestController');
 }
+Route::get('logs', ['uses'=>'\Rap2hpoutre\LaravelLogViewer\LogViewerController@index', 'middleware'=>'admin_only']);
 
 Route::controller('/password', 'PasswordController');
 Route::controller('/install', 'InstallController');
